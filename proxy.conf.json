@@ -1,0 +1,8 @@
+{
+    "/api/*": {
+        "target": "http://744d-197-2-89-247.ngrok.io/",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+}
