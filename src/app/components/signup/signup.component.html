@@ -6,18 +6,69 @@
                 placeholder="Username" formControlName="username" />
                 <div class="input-icon"><i class="fa fa-user"></i></div>
             </div>
+
+            <div>
+                <div *ngIf="signupform.controls['username'].invalid && 
+                (signupform.controls['username'].touched || signupform.controls['username'].dirty) ">
+
+                    <div *ngIf="signupform.controls['username'].errors.required"  class="alert alert-danger" role="alert">
+                        username is required
+                    </div>
+                    <div *ngIf="signupform.controls['username'].errors.minlength"  class="alert alert-danger" role="alert">
+                        username must be at least 5 characters
+                    </div>
+                </div>
+
+                
+            </div>
+
+
+
             <div class="input-group input-group-icon"><input type="email" formControlName="email"
                  placeholder="Email Adress" />
                 <div class="input-icon"><i class="fa fa-envelope"></i></div>
             </div>
+            
+            <div>
+                <div *ngIf="signupform.controls['email'].invalid && 
+                (signupform.controls['email'].touched || signupform.controls['email'].dirty) ">
+
+                    <div *ngIf="signupform.controls['email'].errors.required"  class="alert alert-danger" role="alert">
+                        email is required
+                    </div>
+                    <div *ngIf="signupform.controls['email'].errors.email"  class="alert alert-danger" role="alert">
+                        not a correct form
+                    </div>
+                </div>
+
+                
+            </div>
+
             <div class="input-group input-group-icon"><input type="tel"  formControlName="telephone"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"    placeholder="telephone" />
+                   placeholder="telephone" />
                 <div class="input-icon"><i class="fa fa-key"></i></div>
             </div>
             <div class="input-group input-group-icon"><input type="password" formControlName="password"
                 placeholder="Password" />
                 <div class="input-icon"><i class="fa fa-key"></i></div>
             </div>
+
+            <div>
+                <div *ngIf="signupform.controls['password'].invalid && 
+                (signupform.controls['password'].touched || signupform.controls['password'].dirty) ">
+
+                    <div *ngIf="signupform.controls['password'].errors.required"  class="alert alert-danger" role="alert">
+                        password is required
+                    </div>
+                    <div *ngIf="signupform.controls['password'].errors.minlength"  class="alert alert-danger" role="alert">
+                        password must be at least 8 characters
+                    </div>
+                </div>
+
+                
+            </div>
+
+
         </div>
         <div class="row">
             <div class="col-half">
@@ -55,11 +106,11 @@
             <div class="input-group"><input id="terms" type="checkbox" /><label for="terms">I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.</label></div>
         </div>-->
         <div> 
-            <button type="button" class="btn btn-primary" (click)="signup()" style="background-color: #5A189A;">Signup</button>
+            <button type="button" class="btn btn-primary" [disabled]="signupform.invalid" (click)="signup()" style="background-color: #5A189A;">Signup</button>
         </div>
         <DIV>
-            <span style="margin-top: 20px;font-size: 34;position: relative;right: 25px;">
-                allready have an account <a href="/login">login here</a>
+            <span style="margin-top: 20px;font-size: 34;position: relative;right: 25px;color: #5A189A;">
+                allready have an account <a href="/login" >login here</a>
             </span>
         </DIV>
     </form>

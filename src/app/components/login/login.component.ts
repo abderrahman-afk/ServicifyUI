@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 
@@ -9,20 +9,23 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  loginform: FormGroup;
+  user: any = {};
 
-  signinform : FormGroup;
-  constructor(private fb:FormBuilder, private userService:UserService, private router: Router) { }
+  constructor(private fb:FormBuilder, private userService: UserService, private router: Router) { }
+
 
   ngOnInit() {
-    this.signinform=this.fb.group({
-      username:[''],
-      password:[''],
+    this.loginform = this.fb.group({
+      username: [''],
+      password: ['']
+
     })
   }
+  login() {
+    this.userService.login(this.loginform.value)
+      .then(() => this.router.navigate(['/home']))
+      .catch((e) => console.error(e))
 
-  signin(){
-    this.userService.login(this.signinform.value)
-    .then( () => this.router.navigate(['/home']))
-    .catch( (e) => console.error(e))
   }
 }
