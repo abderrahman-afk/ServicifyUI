@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { worker } from 'cluster';
 import { AdminService } from 'src/app/services/admin.service';
 
 @Component({
@@ -17,7 +16,7 @@ export class AdminWorkersComponent implements OnInit {
 
   ngOnInit() {
     this.adminService.workers().then( response => {
-      this.workers = response.map( worker => {  } )
+      this.workers = response.map( worker => { id: worker.id } )
     })
     .catch((e) => console.log(e))
   }
