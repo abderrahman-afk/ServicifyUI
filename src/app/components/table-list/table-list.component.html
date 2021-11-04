@@ -1,0 +1,30 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> {{ title }} </h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+                <th *ngFor="let head of header" >
+                  {{ head }}
+                </th>
+              </thead>
+              <tbody *ngIf="data">
+                <tr *ngFor="let object of data">
+                  <td *ngFor="let value of map(object)">
+                    {{ value }}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

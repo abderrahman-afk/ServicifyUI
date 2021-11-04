@@ -38,8 +38,14 @@ export class UserService {
     localStorage.setItem('token',response.token)
   }
 
-  request() {
-    
+  requestRole( form ) {
+    return this.http.post(`/api/auth/send`, form)
+    .toPromise()
+    .then( (response) => {
+      console.log(response)
+      //this.setUserAndToken(response)
+      return response
+    })
   }
 
   getToken() {

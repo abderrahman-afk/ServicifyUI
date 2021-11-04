@@ -6,9 +6,20 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TokenInterceptor } from './auth/auth.interceptor';
 import { HeaderComponent } from './components/header/header.component';
-import { LoginComponent } from './components/login/login.component';
-import { SignupComponent } from './components/signup/signup.component';
-import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
+import { SignupComponent } from './pages/signup/signup.component';
+import { HomeComponent } from './pages/home/home.component';
+import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
+import { AppLayoutComponent } from './layout/app-layout/app-layout.component';
+import { AdminClientsComponent } from './pages/admin-clients/admin-clients.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TableListComponent } from './components/table-list/table-list.component';
+import { AdminWorkersComponent } from './pages/admin-workers/admin-workers.component';
+import { AdminRequestsComponent } from './pages/admin-requests/admin-requests.component';
+//import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -17,13 +28,24 @@ import { HomeComponent } from './components/home/home.component';
     HeaderComponent,
     LoginComponent,
     HomeComponent,
+    AdminLayoutComponent,
+    AppLayoutComponent,
+    AdminClientsComponent,
+    FooterComponent,
+    SidebarComponent,
+    NavbarComponent,
+    TableListComponent,
+    AdminWorkersComponent,
+    AdminRequestsComponent
   ],
   imports: [
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    //ToastrModule.forRoot()
   ],
   providers: [
     {
