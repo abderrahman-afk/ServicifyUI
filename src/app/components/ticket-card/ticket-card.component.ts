@@ -8,7 +8,7 @@ import { Component,Input, OnInit } from '@angular/core';
 export class TicketCardComponent implements OnInit {
 
   constructor() { }
-  @Input() course_child:any;
+  @Input() ticket_child:any;
   ngOnInit() {
   }
 
