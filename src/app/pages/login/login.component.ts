@@ -24,10 +24,7 @@ export class LoginComponent implements OnInit {
   }
   login() {
     this.userService.login(this.user)
-      .then(() => this.router.navigate(['/app/home']))
-      .catch((e) => console.error(e))
-      console.log("hey hey");
-      
-
+      .then(() => this.router.navigate(['/app/']))
+      .catch((e) => console.error(e))      
   }
 }

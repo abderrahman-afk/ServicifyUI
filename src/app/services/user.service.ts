@@ -24,22 +24,18 @@ export class UserService {
   }
 
   login(credentials) {
-    console.log("hey from service");
-    console.log("ee",credentials);
     return this.http.post(`/api/auth/login`, credentials,  this.config.guestRequest)
     .toPromise()
     .then( (response) => {
-     
       console.log(response)
       this.setUserAndToken(response)
-     
-      
       return response
     })
   }
 
   setUserAndToken ( response ) {
     this.user =  new User( response.user.username , response.user.email )
+    localStorage.setItem('user', this.user.toJSON())
     localStorage.setItem('token',response.token)
   }
 
@@ -55,6 +51,14 @@ export class UserService {
 
   getToken() {
     return localStorage.getItem('token')
+  }
+
+  getUser() {
+    const user = localStorage.getItem('user')
+    if ( user ) {
+      return JSON.parse(user)
+    }
+    return null
   }
 
 

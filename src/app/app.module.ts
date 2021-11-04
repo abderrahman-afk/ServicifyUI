@@ -20,6 +20,7 @@ import { TableListComponent } from './components/table-list/table-list.component
 import { AdminWorkersComponent } from './pages/admin-workers/admin-workers.component';
 import { AdminRequestsComponent } from './pages/admin-requests/admin-requests.component';
 import { TicketListComponent } from './pages/ticket-list/ticket-list.component';
+import { MainComponent } from './pages/main/main.component';
 //import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
@@ -38,7 +39,8 @@ import { TicketListComponent } from './pages/ticket-list/ticket-list.component';
     TableListComponent,
     AdminWorkersComponent,
     AdminRequestsComponent,
-    TicketListComponent
+    TicketListComponent,
+    MainComponent
   ],
   imports: [
     HttpClientModule,
