@@ -23,9 +23,11 @@ export class LoginComponent implements OnInit {
     })
   }
   login() {
-    this.userService.login(this.loginform.value)
-      .then(() => this.router.navigate(['/home']))
+    this.userService.login(this.user)
+      .then(() => this.router.navigate(['/app/home']))
       .catch((e) => console.error(e))
+      console.log("hey hey");
+      
 
   }
 }
