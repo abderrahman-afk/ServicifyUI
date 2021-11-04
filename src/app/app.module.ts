@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TableListComponent } from './components/table-list/table-list.component';
 import { AdminWorkersComponent } from './pages/admin-workers/admin-workers.component';
 import { AdminRequestsComponent } from './pages/admin-requests/admin-requests.component';
+import { TicketListComponent } from './pages/ticket-list/ticket-list.component';
 //import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
@@ -36,7 +37,8 @@ import { AdminRequestsComponent } from './pages/admin-requests/admin-requests.co
     NavbarComponent,
     TableListComponent,
     AdminWorkersComponent,
-    AdminRequestsComponent
+    AdminRequestsComponent,
+    TicketListComponent
   ],
   imports: [
     HttpClientModule,

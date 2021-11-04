@@ -8,6 +8,7 @@ import { AppLayoutComponent } from "./layout/app-layout/app-layout.component";
 import { AdminClientsComponent } from "./pages/admin-clients/admin-clients.component";
 import { AdminWorkersComponent } from "./pages/admin-workers/admin-workers.component";
 import { AdminRequestsComponent } from "./pages/admin-requests/admin-requests.component";
+import { TicketListComponent } from "./pages/ticket-list/ticket-list.component";
 
 const routes: Routes = [
   {
@@ -17,6 +18,7 @@ const routes: Routes = [
       { path: "signup", component: SignupComponent },
       { path: "home", component: HomeComponent },
       { path: "login", component: LoginComponent },
+      {path:"ticket-list",component:TicketListComponent},
     ],
   },
   {
