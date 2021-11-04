@@ -21,6 +21,7 @@ import { AdminWorkersComponent } from './pages/admin-workers/admin-workers.compo
 import { AdminRequestsComponent } from './pages/admin-requests/admin-requests.component';
 import { TicketListComponent } from './pages/ticket-list/ticket-list.component';
 import { MainComponent } from './pages/main/main.component';
+import { TicketCardComponent } from './components/ticket-card/ticket-card.component';
 //import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
@@ -33,6 +34,7 @@ import { MainComponent } from './pages/main/main.component';
     AdminLayoutComponent,
     AppLayoutComponent,
     AdminClientsComponent,
+    TicketCardComponent,
     FooterComponent,
     SidebarComponent,
     NavbarComponent,

@@ -1,1 +1,12 @@
-<p>ticket-list works!</p>
+<div>
+    <div>
+        <h2>list of tickets</h2>
+    </div>
+    <div class="row courses_row">
+        <div *ngFor="let ticket of tickets" class="col-lg-4 course_col">
+            <div class="course">
+                <app-ticket-card [ticket_child]="ticket"></app-ticket-card>
+            </div>
+        </div>
+    </div>
+</div>
