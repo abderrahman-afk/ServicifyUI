@@ -1,7 +1,7 @@
 <div class="wrapper">
     <form class="login" #loginform="ngForm" (ngSubmit)="login()">
       <p class="title">Log in</p>
-      <input type="text" placeholder="Username" [(ngModel)]="user.username" [ngModelOptions]="{standalone: true}"autofocus/>
+      <input type="text" placeholder="Username" [(ngModel)]="user.username" [ngModelOptions]="{standalone: true}" autofocus/>
       <i class="fa fa-user"></i>
       <input type="password" placeholder="Password" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}"/>
       <i class="fa fa-key"></i>

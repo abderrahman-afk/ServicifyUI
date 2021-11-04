@@ -12,19 +12,19 @@ export class LoginComponent implements OnInit {
   loginform: FormGroup;
   user: any = {};
 
-  constructor(private fb:FormBuilder, private userService: UserService, private router: Router) { }
+  constructor(private fb: FormBuilder, private userService: UserService, private router: Router) { }
 
 
   ngOnInit() {
     this.loginform = this.fb.group({
       username: [''],
       password: ['']
-
     })
   }
+
   login() {
     this.userService.login(this.user)
       .then(() => this.router.navigate(['/app/']))
-      .catch((e) => console.error(e))      
+      .catch((e) => console.error(e))
   }
 }

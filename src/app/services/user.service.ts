@@ -44,7 +44,6 @@ export class UserService {
     .toPromise()
     .then( (response) => {
       console.log(response)
-      //this.setUserAndToken(response)
       return response
     })
   }
