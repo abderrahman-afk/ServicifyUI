@@ -12,6 +12,7 @@ export class MainComponent implements OnInit {
 
   requestform: FormGroup;
   user: User
+  request = {}
 
   constructor(private fb: FormBuilder, private userService: UserService) { }
 
@@ -25,7 +26,7 @@ export class MainComponent implements OnInit {
   }
 
   requestRole() {
-    this.userService.requestRole(this.requestform.value).then().catch(e => console.error(e))
+    this.userService.requestRole(this.request).then().catch(e => console.error(e))
   }
 
 }
