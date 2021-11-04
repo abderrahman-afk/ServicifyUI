@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { User } from 'src/app/class/user';
 import { UserService } from 'src/app/services/user.service';
 
@@ -9,12 +10,22 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class MainComponent implements OnInit {
 
+  requestform: FormGroup;
   user: User
 
-  constructor(private userService: UserService) { }
+  constructor(private fb: FormBuilder, private userService: UserService) { }
 
   ngOnInit() {
     this.user = this.userService.getUser()
+    this.requestform = this.fb.group({
+      job: [''],
+      description: [''],
+      disponible: [''],
+    })
+  }
+
+  requestRole() {
+    this.userService.requestRole(this.requestform.value).then().catch(e => console.error(e))
   }
 
 }

@@ -33,17 +33,16 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel"> Request to be a worker</h5>
             </div>
-            <form class="login" #loginform="ngForm" (ngSubmit)="login()">
-                <input type="text" placeholder="Username" [(ngModel)]="user.username"
-                    [ngModelOptions]="{standalone: true}" autofocus />
+            <form class="request" #requestform="ngForm" (ngSubmit)="requestRole()">
+                <input type="text" placeholder="Job" [(ngModel)]="requestform.job" [ngModelOptions]="{standalone: true}" autofocus />
                 <i class="fa fa-user"></i>
-                <input type="password" placeholder="Password" [(ngModel)]="user.password"
-                    [ngModelOptions]="{standalone: true}" />
+                <input type="text" placeholder="Disponible" [(ngModel)]="requestform.disponible" [ngModelOptions]="{standalone: true}" />
                 <i class="fa fa-key"></i>
-                <button (click)="login()">
-                    <i class="spinner"></i>
-                    <span class="state">Log in</span>
-                </button>
+                <input type="text" placeholder="Description" [(ngModel)]="requestform.description" [ngModelOptions]="{standalone: true}" />
+                <i class="fa fa-key"></i>
+                <div>
+                    <button class="btn" (click)="requestRole()"> Request </button>
+                </div>
             </form>
         </div>
     </div>

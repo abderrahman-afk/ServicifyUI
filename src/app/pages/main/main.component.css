@@ -170,28 +170,27 @@ body {
     padding: 20px;
     background: rgba(255, 255, 255, 0.85);
 }
-.login {
+.request {
     border-radius: 2px 2px 5px 5px;
     padding: 10px 20px 20px 20px;
-    width: 90%;
-    max-width: 320px;
+    width: 100%;
     background: #fff;
     position: relative;
     padding-bottom: 80px;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
 }
-.login.loading button {
+
+.request.loading button {
     max-height: 100%;
     padding-top: 50px;
 }
-.login.loading button .spinner {
+.request.loading button .spinner {
     opacity: 1;
     top: 40%;
 }
-.login.ok button {
+.request.ok button {
     background-color: #8bc34a;
 }
-.login.ok button .spinner {
+.request.ok button .spinner {
     border-radius: 0;
     border-top-color: transparent;
     border-right-color: transparent;
@@ -199,7 +198,7 @@ body {
     animation: none;
     transform: rotateZ(-45deg);
 }
-.login input {
+.request input {
     display: block;
     padding: 15px 10px;
     margin-bottom: 10px;
@@ -209,7 +208,7 @@ body {
     border-radius: 2px;
     color: #ccc;
 }
-.login input + i.fa {
+.request input + i.fa {
     color: #fff;
     font-size: 1em;
     position: absolute;
@@ -218,23 +217,23 @@ body {
     left: 0;
     transition: all 0.1s ease-in;
 }
-.login input:focus {
+.request input:focus {
     outline: none;
     color: #444;
     border-color: #5A189A;
     border-left-width: 35px;
 }
-.login input:focus + i.fa {
+.request input:focus + i.fa {
     opacity: 1;
     left: 30px;
     transition: all 0.25s ease-out;
 }
-.login a {
+.request a {
     font-size: 0.8em;
     color: #5A189A;
     text-decoration: none;
 }
-.login .title {
+.request .title {
     color: #444;
     font-size: 1.2em;
     font-weight: bold;
@@ -242,26 +241,11 @@ body {
     border-bottom: 1px solid #eee;
     padding-bottom: 20px;
 }
-.login button {
-    width: 100%;
-    height: 100%;
-    padding: 10px 10px;
+.request button {
     background: #5A189A;
-    color: #fff;
-    display: block;
-    border: none;
-    margin-top: 20px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    max-height: 60px;
-    border: 0px solid rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 2px 2px;
-    transform: rotateZ(0deg);
-    transition: all 0.1s ease-out;
-    border-bottom-width: 7px;
+    width: 100%;
 }
-.login button .spinner {
+.request button .spinner {
     display: block;
     width: 40px;
     height: 40px;
@@ -278,10 +262,10 @@ body {
     transition: top 0.3s 0.3s ease, opacity 0.3s 0.3s ease, border-radius 0.3s ease;
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
 }
-.login:not(.loading) button:hover {
+.request:not(.loading) button:hover {
     box-shadow: 0px 1px 3px #5A189A;
 }
-.login:not(.loading) button:focus {
+.request:not(.loading) button:focus {
     border-bottom-width: 4px;
 }
 
