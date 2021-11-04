@@ -17,7 +17,9 @@ export class TableListComponent implements OnInit {
   }
 
   map( object ) {
-    return Object.values(object)
+    const clone = {...object}
+    delete clone.actions
+    return Object.values(clone)
   }
 
 }

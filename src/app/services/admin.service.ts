@@ -48,10 +48,10 @@ export class AdminService {
     })
   }
 
-  requests(id) {
+  requests() {
     return this.http.get(`/api/auth/listRequest/`)
     .toPromise()
-    .then( (response) => {
+    .then( (response:any) => {
       console.log(response)
       return response
     })

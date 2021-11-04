@@ -11,7 +11,7 @@
           <div class="table-responsive">
             <table class="table">
               <thead class=" text-primary">
-                <th *ngFor="let head of header" >
+                <th *ngFor="let head of header">
                   {{ head }}
                 </th>
               </thead>
@@ -20,6 +20,9 @@
                   <td *ngFor="let value of map(object)">
                     {{ value }}
                   </td>
+                  <td *ngIf="object.actions">
+                    <button *ngFor="let button of object.actions" (click)='button.action()' [class]="'btn ' + button.icon "></button>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -27,4 +30,4 @@
         </div>
       </div>
     </div>
-</div>
+  </div>
