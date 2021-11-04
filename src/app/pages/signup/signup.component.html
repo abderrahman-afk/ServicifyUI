@@ -14,9 +14,7 @@
                     <div *ngIf="signupform.controls['username'].errors.required"  class="alert alert-danger" role="alert">
                         username is required
                     </div>
-                    <div *ngIf="signupform.controls['username'].errors.minlength"  class="alert alert-danger" role="alert">
-                        username must be at least 5 characters
-                    </div>
+                    
                 </div>
 
                 
@@ -110,7 +108,7 @@
         </div>
         <DIV>
             <span style="margin-top: 20px;font-size: 34;position: relative;right: 25px;color: #5A189A;">
-                allready have an account <a href="/login" >login here</a>
+                allready have an account <a href="/app/login" >login here</a>
             </span>
         </DIV>
     </form>

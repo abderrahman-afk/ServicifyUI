@@ -17,7 +17,7 @@ export class SignupComponent implements OnInit {
 
   ngOnInit() {
     this.signupform=this.fb.group({
-      username:['',[Validators.required,Validators.minLength(5)]],
+      username:[''],
       email:['',[Validators.required,Validators.email]],
       telephone:[''],
       password:['',[Validators.required,Validators.minLength(8)]],
@@ -30,7 +30,7 @@ export class SignupComponent implements OnInit {
 
   signup(){
     this.userService.register(this.signupform.value)
-    .then( () => this.router.navigate(['/login']))
+    .then( () => this.router.navigate(['/app/login']))
     .catch( (e) => console.error(e))
   }
   

@@ -24,11 +24,16 @@ export class UserService {
   }
 
   login(credentials) {
+    console.log("hey from service");
+    console.log("ee",credentials);
     return this.http.post(`/api/auth/login`, credentials,  this.config.guestRequest)
     .toPromise()
     .then( (response) => {
+     
       console.log(response)
       this.setUserAndToken(response)
+     
+      
       return response
     })
   }
