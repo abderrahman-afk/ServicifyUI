@@ -9,9 +9,9 @@ export class TicketListComponent implements OnInit {
 
   tickets = [
     { job:"repair",client: "abdou",profile:"../../../assets/img/clark-young-fQxMGkYXqFU-unsplash.jpg", description: "the job is to repair the and the other thing with installing the first thing in many rooms", tel: "123456788" },
-    { job:"fix",client: "khalil hamdi",profile:"../../../assets/img/clark-young-fQxMGkYXqFU-unsplash.jpg", description: "the job is to fix  two things the first thing in many rooms", tel: "123456788" },
-    { job:"install",client: "heni ben gharbia", profile:"../../../assets/img/clark-young-fQxMGkYXqFU-unsplash.jpg",description: "the job is to maintini  nine things ", tel: "123456788" },
-    { job:"build",client: "aziza boulabiar",profile:"../../../assets/img/clark-young-fQxMGkYXqFU-unsplash.jpg", description: "the job is to create  two things and a mirror", tel: "123456788" },
+    { job:"fix",client: "khalil hamdi",profile:"../../../assets/img/frankie-cordoba-3H9d6O0mbi8-unsplash.jpg", description: "the job is to fix  two things the first thing in many rooms", tel: "123456788" },
+    { job:"install",client: "heni ben gharbia", profile:"../../../assets/img/chris-briggs-ILBrHd6PFJA-unsplash.jpg",description: "the job is to maintini  nine things ", tel: "123456788" },
+    { job:"build",client: "aziza boulabiar",profile:"../../../assets/img/scott-graham-5fNmWej4tAA-unsplash.jpg", description: "the job is to create  two things and a mirror", tel: "123456788" },
   ]
 
   constructor() { }
