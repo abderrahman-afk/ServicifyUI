@@ -11,5 +11,9 @@ export class TicketListComponent implements OnInit {
 
   ngOnInit() {
   }
+  courses: {
+    name:
+    
+  }
 
 }
