@@ -19,7 +19,21 @@ filter: drop-shadow(0px 1px 15px rgba(0, 0, 0, 0.05));">
           <li>
              <a class="nav-link"  (click)="logout()"  routerLink="login"> Logout </a>
           </li>
+          <li>
+            <div class="dropdown" style="position: absolute;right: 16px;">
+             
+              <button style="background-color: #5A189A;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Profile
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
           
+            </div>
+         
+          </li>
         </ul>
         <span class="navbar-text">
          
