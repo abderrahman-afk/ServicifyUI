@@ -20,7 +20,18 @@
 filter: drop-shadow(0px 1px 35px rgba(0, 0, 0, 0.05));
 
   }
+  .bottomleft {
+    position: absolute;
+    bottom: 300px;
+    left: 100px;
+    font-size: 18px;
+  }
+  
  
+ 
+  .container {
+    position: relative;
+  }
   .box {
     display: flex;
     align-items: stretch;
