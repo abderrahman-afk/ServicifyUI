@@ -6,11 +6,18 @@
       <input type="password" placeholder="Password" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}"/>
       <i class="fa fa-key"></i>
       <a href="#">Forgot your password?</a>
-      <button (click)="login()" >
+      <button >
         <i class="spinner"></i>
         <span class="state">Log in</span>
       </button>
     </form>
     <footer><div style="color: #5A189A;"> don't have an account ?<a style="color: #22a5f1;" href="/app/signup">singup here</a> </div></footer>
-    
+    <div>
+      <h3>notification examples</h3>
+    <button class="state" (click)="notif_success()">show notification success</button>
+    <button class="state" (click)="notif_error()">show notification error</button>
+
+    <button  class="state" (click)="notif_warning()">show notification warning</button>
+  </div>
+
   </div>

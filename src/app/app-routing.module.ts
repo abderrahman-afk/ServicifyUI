@@ -22,7 +22,7 @@ const routes: Routes = [
       { path: "login", component: LoginComponent },
       { path: "ticket-list", component: TicketListComponent },
     ],
-  },
+  }, { path: '', redirectTo: '/app/home', pathMatch: 'full' },
   {
     path: "administration",
     component: AdminLayoutComponent,

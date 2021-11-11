@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from '../class/user';
+import { AlertyfyService } from './alertyfy.service';
 import { ConfigService } from './config.service';
 
 @Injectable({
@@ -10,7 +11,7 @@ export class UserService {
 
   user: User | null = null
 
-  constructor(private http: HttpClient, private config: ConfigService) {}
+  constructor(private http: HttpClient, private config: ConfigService,private alertyfy:AlertyfyService) {}
 
   register(account) {
     return this.http
@@ -19,6 +20,7 @@ export class UserService {
     .then( (response:any) => {
       console.log(response)
       this.setUserAndToken(response)
+      this.alertyfy.success("register successfully")
       return response
     })
   }
@@ -29,6 +31,7 @@ export class UserService {
     .then( (response) => {
       console.log(response)
       this.setUserAndToken(response)
+      this.alertyfy.success("login successful")
       return response
     })
   }
