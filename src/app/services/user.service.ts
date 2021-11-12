@@ -37,7 +37,7 @@ export class UserService {
   }
 
   setUserAndToken ( response ) {
-    this.user =  new User( response.user.username , response.user.email )
+    this.user =  new User( response.user.nom , response.user.email , response.user.is_employees )
     localStorage.setItem('user', this.user.toJSON())
     localStorage.setItem('token',response.token)
   }
