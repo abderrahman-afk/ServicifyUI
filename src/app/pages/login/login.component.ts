@@ -25,19 +25,14 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.userService.login(this.user)
-      .then(
-        () => this.router.navigate(['/app/'])
-      )
-      .catch((e) => console.error(e))
-  }
-  notif_success(){
-    this.alertyfy.success("hi hi hi");
+      .then( () => {
+          this.alertyfy.success("You logged in successfully");
+          this.router.navigate(['/app/'])
+        })
+      .catch((e) => {
+        this.alertyfy.error("check your credentials");
+        console.error(e)
+      })
   }
 
-  notif_error(){
-    this.alertyfy.error("example of error notif")
-  }
-  notif_warning(){
-    this.alertyfy.warning("example of warning notif")
-  }
 }
