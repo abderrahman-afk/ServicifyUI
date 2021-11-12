@@ -5,8 +5,8 @@ import * as aslertyfy from 'alertifyjs'
 })
 export class AlertyfyService {
 
-  constructor() { }
-  //reformat alertify function
+  constructor() {}
+  
   success(message) {
     aslertyfy.success(message);
   }

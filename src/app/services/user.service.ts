@@ -63,5 +63,25 @@ export class UserService {
     return null
   }
 
+  logout() { 
+    const clear = () => {
+      localStorage.removeItem('user')
+      localStorage.removeItem('token')
+    }
+    //TO DO: burn token in backend
+     
+    /*
+    return this.http.delete(`/api/auth/logout`)
+    .toPromise()
+    .then( (response) => {
+      console.log(response) */
+      clear()
+   /*   return response
+    })*/
+  }
+
+  isLogged() {
+    return this.getToken() !== undefined && this.getToken() !== null
+  }
 
 }

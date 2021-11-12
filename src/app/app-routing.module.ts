@@ -10,22 +10,25 @@ import { AdminWorkersComponent } from "./pages/admin-workers/admin-workers.compo
 import { AdminRequestsComponent } from "./pages/admin-requests/admin-requests.component";
 import { TicketListComponent } from "./pages/ticket-list/ticket-list.component";
 import { MainComponent } from "./pages/main/main.component";
+import { GuestGuard } from "./auth/guest.guard";
+import { AuthedGuard } from "./auth/authed.guard";
 
 const routes: Routes = [
   {
     path: "app",
     component: AppLayoutComponent,
     children: [
-      { path: "", component: MainComponent },
-      { path: "signup", component: SignupComponent },
-      { path: "home", component: HomeComponent },
-      { path: "login", component: LoginComponent },
-      { path: "ticket-list", component: TicketListComponent },
+      { path: "", component: MainComponent , canActivate: [AuthedGuard] },
+      { path: "signup", component: SignupComponent , canActivate: [GuestGuard] },
+      { path: "home", component: HomeComponent , canActivate: [GuestGuard] },
+      { path: "login", component: LoginComponent , canActivate: [GuestGuard] },
+      { path: "ticket-list", component: TicketListComponent , canActivate: [GuestGuard] },
     ],
   }, { path: '', redirectTo: '/app/home', pathMatch: 'full' },
   {
     path: "administration",
     component: AdminLayoutComponent,
+    canActivate: [AuthedGuard] ,
     children: [
       { path: "clients", component: AdminClientsComponent },
       { path: "workers", component: AdminWorkersComponent },

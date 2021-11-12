@@ -5,14 +5,14 @@
 
 </div>
 <div class="container">
-  <img  style="opacity: 0.7;" class="rounded float-left" src="../../../assets/img/scott-graham-5fNmWej4tAA-unsplash.jpg" alt="" height="700px" width="100%">
+  <img  style="opacity: 0.7;" class="rounded float-left" src="../../../assets/img/scott-graham-5fNmWej4tAA-unsplash.jpg" alt="">
   <div class="bottomleft">
   <h3 style="color: white;"><strong>  GOOD SERVICE</strong> <br>
   <span> IS A</span><br>
   <strong>  GOOD BUSINESS</strong><br>
   </h3>
   <div>
-    <button class="btn btn-primary">join us </button>
+    <button class="btn btn-primary" (click)="join()">join us </button>
     <a href="#" class="fa fa-facebook"><i class="fab fa-facebook"></i></a>
 <a href="#" class="fa fa-twitter"></a>
   </div>
@@ -27,25 +27,9 @@
   <hr>
 </div>
 <div class="box"> 
-  <div class="card" style="width: 18rem;">
-    <img src="../../../assets/img/christopher-burns-8KfCR12oeUM-unsplash.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
 
+  <div *ngFor="let i of [1,2,3,4]">
 
- 
-  <div class="card" style="width: 18rem;">
-    <img src="../../../assets/img/christopher-burns-8KfCR12oeUM-unsplash.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary" >Go somewhere</a>
-    </div>
-  </div>
 
   <div class="card" style="width: 18rem;">
     <img src="../../../assets/img/christopher-burns-8KfCR12oeUM-unsplash.jpg" class="card-img-top" alt="...">
@@ -55,11 +39,8 @@
       <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
-  <div>
-    
 </div>
-
-
+  
 </div>
 
 

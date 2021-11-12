@@ -14,10 +14,17 @@
             <div class="d-flex flex-column text-right mr-2"> <span class="current-balance">Current Balance</span> <span
                     class="amount"><span class="dollar-sign">$</span>1476</span> </div>
         </div>
-        <div class="my-3">
+        <div *ngIf="!user.is_employees ; else dashboardLink" class="my-3">
             do you want to become a Worker? <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
                 class="btn btn-primary btn-sm"> Request now </button>
         </div>
+        <ng-template #dashboardLink>
+            <div class="my-3">
+                switch to Worker profile ? <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    class="btn btn-primary btn-sm"> Go to dashboard </button>
+            </div>
+        </ng-template>
+
         <div class="recent-border mt-4"> <span class="recent-orders">Recent orders</span> </div>
         <div class="wishlist-border pt-2"> <span class="wishlist">Wishlist</span> </div>
         <div class="fashion-studio-border pt-2"> <span class="fashion-studio">Fashion studio</span> </div>
@@ -34,11 +41,14 @@
                 <h5 class="modal-title" id="exampleModalLabel"> Request to be a worker</h5>
             </div>
             <form class="request" #requestform="ngForm" (ngSubmit)="requestRole()">
-                <input type="text" placeholder="Job" [(ngModel)]="request.job" [ngModelOptions]="{standalone: true}" autofocus />
+                <input type="text" placeholder="Job" [(ngModel)]="request.job" [ngModelOptions]="{standalone: true}"
+                    autofocus />
                 <i class="fa fa-user"></i>
-                <input type="text" placeholder="Disponible" [(ngModel)]="request.disponible" [ngModelOptions]="{standalone: true}" />
+                <input type="text" placeholder="Disponible" [(ngModel)]="request.disponible"
+                    [ngModelOptions]="{standalone: true}" />
                 <i class="fa fa-key"></i>
-                <input type="text" placeholder="Description" [(ngModel)]="request.description" [ngModelOptions]="{standalone: true}" />
+                <input type="text" placeholder="Description" [(ngModel)]="request.description"
+                    [ngModelOptions]="{standalone: true}" />
                 <i class="fa fa-key"></i>
                 <div>
                     <button class="btn" (click)="requestRole()"> Request </button>
