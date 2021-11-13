@@ -12,6 +12,7 @@ import { TicketListComponent } from "./pages/ticket-list/ticket-list.component";
 import { MainComponent } from "./pages/main/main.component";
 import { GuestGuard } from "./auth/guest.guard";
 import { AuthedGuard } from "./auth/authed.guard";
+import { ProfileComponent } from "./components/profile/profile.component";
 
 const routes: Routes = [
   {
@@ -23,6 +24,7 @@ const routes: Routes = [
       { path: "home", component: HomeComponent , canActivate: [GuestGuard] },
       { path: "login", component: LoginComponent , canActivate: [GuestGuard] },
       { path: "ticket-list", component: TicketListComponent , canActivate: [GuestGuard] },
+      {path:"profile",component:ProfileComponent}
     ],
   }, { path: '', redirectTo: '/app/home', pathMatch: 'full' },
   {

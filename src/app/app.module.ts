@@ -22,6 +22,7 @@ import { AdminRequestsComponent } from './pages/admin-requests/admin-requests.co
 import { TicketListComponent } from './pages/ticket-list/ticket-list.component';
 import { MainComponent } from './pages/main/main.component';
 import { TicketCardComponent } from './components/ticket-card/ticket-card.component';
+import { ProfileComponent } from './components/profile/profile.component';
 //import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
@@ -42,7 +43,8 @@ import { TicketCardComponent } from './components/ticket-card/ticket-card.compon
     AdminWorkersComponent,
     AdminRequestsComponent,
     TicketListComponent,
-    MainComponent
+    MainComponent,
+    ProfileComponent
   ],
   imports: [
     HttpClientModule,
