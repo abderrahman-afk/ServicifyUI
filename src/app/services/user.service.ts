@@ -37,7 +37,7 @@ export class UserService {
   }
 
   setUserAndToken ( response ) {
-    this.user =  new User( response.user.username , response.user.email )
+    this.user =  new User( response.user.nom , response.user.email , response.user.is_employees )
     localStorage.setItem('user', this.user.toJSON())
     localStorage.setItem('token',response.token)
   }
@@ -68,20 +68,26 @@ export class UserService {
       localStorage.removeItem('user')
       localStorage.removeItem('token')
     }
-    //TO DO: burn token in backend
-     
-    /*
     return this.http.delete(`/api/auth/logout`)
     .toPromise()
     .then( (response) => {
-      console.log(response) */
+      console.log(response) 
       clear()
-   /*   return response
-    })*/
+      return response
+    })
   }
 
   isLogged() {
     return this.getToken() !== undefined && this.getToken() !== null
+  }
+
+  updateProfile( form ) {
+    return this.http.post(`/api/auth/updateInfo/client`, form )
+    .toPromise()
+    .then( (response) => {
+      console.log(response) 
+      return response
+    })
   }
 
 }

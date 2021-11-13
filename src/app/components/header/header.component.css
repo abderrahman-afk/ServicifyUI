@@ -1,0 +1,14 @@
+.serviceify {
+    font-size: 16px;
+    font-weight: 700;
+    color: #5957f9;
+    margin-left: 2px
+}
+
+i {
+    font-size: 18px;
+}
+
+a:hover {
+    color: #5957f9 ;
+}

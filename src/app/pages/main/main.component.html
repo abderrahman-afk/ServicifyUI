@@ -14,7 +14,7 @@
             <div class="d-flex flex-column text-right mr-2"> <span class="current-balance">Current Balance</span> <span
                     class="amount"><span class="dollar-sign">$</span>1476</span> </div>
         </div>
-        <div *ngIf="!user.is_employees ; else dashboardLink" class="my-3">
+        <div *ngIf="!user.employee ; else dashboardLink" class="my-3">
             do you want to become a Worker? <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
                 class="btn btn-primary btn-sm"> Request now </button>
         </div>

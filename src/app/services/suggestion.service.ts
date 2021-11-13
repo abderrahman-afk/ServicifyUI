@@ -5,13 +5,13 @@ import { ConfigService } from './config.service';
 @Injectable({
   providedIn: 'root'
 })
-export class TicketService {
+export class SuggestionService {
 
   constructor(private http: HttpClient, private config: ConfigService) {}
 
-  sendTicket(id , form ) {
+  recommendation() {
     return this.http
-    .post(`/ticket/send/${id}/`, form )
+    .get(`/recommended/`)
     .toPromise()
     .then( (response:any) => {
       console.log(response)
@@ -19,8 +19,8 @@ export class TicketService {
     })
   }
 
-  listTickets() {
-    return this.http.get(`/ticket/liste`)
+  searchByName( name ) {
+    return this.http.get(`/recherchePerName/${name}/`)
     .toPromise()
     .then( (response) => {
       console.log(response)
@@ -28,4 +28,12 @@ export class TicketService {
     })
   }
 
+  searchByInfo( job , address ) {
+    return this.http.get(`/recherchePerCat/${job}/${address}/`)
+    .toPromise()
+    .then( (response) => {
+      console.log(response)
+      return response
+    })
+  }
 }
