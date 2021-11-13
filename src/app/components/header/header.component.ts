@@ -15,9 +15,8 @@ export class HeaderComponent implements OnInit {
 
   logout(){
     this.userService.logout()
-    this.router.navigate(['/app/login'])
-    /*.then(() => this.router.navigate(['/app/login']))
-    .catch((e) => console.error(e))*/
+    .then(() => this.router.navigate(['/app/login']))
+    .catch((e) => console.error(e))
   }
 
 }
