@@ -31,7 +31,7 @@ body {
     border-radius: 33px;
     padding: 8rem !important;
     min-width: 27%;
-    margin: 50px
+    margin: 10px
 }
 
 .top-container {
@@ -285,7 +285,7 @@ body {
 }
 .container {
   display: flex;
-  width: 1040px;
+  width: 999px;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }

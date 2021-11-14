@@ -16,11 +16,11 @@
         </div>
         <div *ngIf="!user.employee ; else dashboardLink" class="my-3">
             do you want to become a Worker? <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                class="btn btn-primary btn-sm"> Request now </button>
+                class="btn btn-primary"> Request now </button>
         </div>
         <ng-template #dashboardLink>
             <div class="my-3">
-                <a href=" /app/worker-profile" class="btn btn-primary btn-sm">go to dashboard</a>
+                <a href=" /app/worker-profile" class="btn btn-primary">go to dashboard</a>
                 <!-- switch to Worker profile ? <button type="button"   
                     class="btn btn-primary btn-sm" > Go to dashboard </button> -->
                   
