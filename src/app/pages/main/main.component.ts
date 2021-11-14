@@ -13,6 +13,7 @@ export class MainComponent implements OnInit {
   requestform: FormGroup;
   user: User
   request:any = {}
+  category:Array<string>=['POPULAR','TECHNOLOGY','DESIGN'];
 
   constructor(private fb: FormBuilder, private userService: UserService) { }
 
