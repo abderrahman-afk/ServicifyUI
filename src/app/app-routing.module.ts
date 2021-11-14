@@ -34,9 +34,9 @@ const routes: Routes = [
     component: AdminLayoutComponent,
     canActivate: [AuthedGuard] ,
     children: [
-      { path: "clients", component: AdminClientsComponent,canActivate: [AuthedGuard] },
-      { path: "workers", component: AdminWorkersComponent,canActivate: [AuthedGuard] },
-      { path: "requests", component: AdminRequestsComponent,canActivate: [AuthedGuard] },
+      { path: "clients", component: AdminClientsComponent },
+      { path: "workers", component: AdminWorkersComponent },
+      { path: "requests", component: AdminRequestsComponent },
     ],
   },
 ];

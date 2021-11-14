@@ -1,130 +1,105 @@
-
-
-<div class="linear-gradient" >
-<div>
-
-</div>
-<div class="container">
-  <img  style="opacity: 0.7;" class="rounded float-left" src="../../../assets/img/scott-graham-5fNmWej4tAA-unsplash.jpg" alt="">
-  <div class="bottomleft">
-  <h3 style="color: white;"><strong>  GOOD SERVICE</strong> <br>
-  <span> IS A</span><br>
-  <strong>  GOOD BUSINESS</strong><br>
-  </h3>
-  <div>
-    <button class="btn btn-primary" (click)="join()">join us </button>
-    <a href="#" class="fa fa-facebook"><i class="fab fa-facebook"></i></a>
-<a href="#" class="fa fa-twitter"></a>
-  </div>
-  </div>
-  
+<div class="linear-gradient">
+<!-- home section -->
+<div id="home" >
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5 col-sm-3"></div>
+			<div class="col-md-7 col-sm-9">
+				<h3>welcome to</h3>
+				<h1><strong>Serviceifey</strong></h1>
+        <a class="btn btn-primary" href="/app/login" style="font-size:large ;"><strong> join us </strong></a>
+			</div>
+		</div>
+	</div>
 </div>
 
-<div>
-  <h3 style=" margin: auto;
-  width: 50%;
-  padding: 10px;">Our Services</h3>
-  <hr>
-</div>
-<div class="box"> 
-
-  <div *ngFor="let i of [1,2,3,4]">
-
-
-  <div class="card" style="width: 18rem;">
-    <img src="../../../assets/img/christopher-burns-8KfCR12oeUM-unsplash.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-</div>
-  
-</div>
-
-
-<div>
-<h3 style=" margin: auto;
-width: 50%;
-padding: 10px;">Subscribe to our newsletter</h3>
-<hr>
+<!-- divider section -->
+<div class="divider">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-sm-6">
+				<div class="divider-wrapper divider-one">
+					<i class="fa fa-laptop"></i>
+					<h2>Responsive</h2>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="divider-wrapper divider-two">
+					<i class="fa fa-mobile"></i>
+					<h2>Easy to use</h2>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-12">
+				<div class="divider-wrapper divider-three">
+					<i class="fa fa-life-ring"></i>
+					<h2>Quick Support</h2>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
- <div>
+<!-- about section -->
+<div id="about">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-12">
+				<img src="assets/images/about-img.jpg" class="img-responsive" alt="about img">
+			</div>
+			<div class="col-md-6 col-sm-12 about-des">
+				<h2>Startup Business</h2>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet.</p>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
+				<a href="about.html" class="btn btn-default">LEARN MORE</a>
+			</div>
+		</div>
+	</div>
+</div>
 
-  <section id="contact">
-  
-    <h1 class="section-header">Contact</h1>
-    
-    <div class="contact-wrapper">
-    
-    <!-- Left contact page --> 
-      
-      <form id="contact-form" class="form-horizontal" role="form">
+<!-- portfolio section -->
+<div id="portfolio">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-2 col-md-8 col-sm-12">
+				<h2>Recent Projects</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
+			</div>
+         </div>
          
-        <div class="form-group">
-          <div class="col-sm-12">
-            <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
-          </div>
-        </div>
-  
-        <div class="form-group">
-          <div class="col-sm-12">
-            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
-          </div>
-        </div>
-  
-        <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
-        
-        <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
-          <div class="alt-send-button">
-            <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
-          </div>
-        
-        </button>
-        
-      </form>
-      
-    <!-- Left contact page --> 
-      
-        <div class="direct-contact-container">
-  
-          <ul class="contact-list">
-            <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">City, State</span></i></li>
+         <div class="row mt30">
             
-            <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></i></li>
+			<div class="col-md-4 col-sm-4 col-xs-6">
+				<a href="images/portfolio-img1.jpg" data-lightbox-gallery="portfolio-gallery"><img src="assets/images/portfolio-img1.jpg" alt="portfolio img"></a>
+			</div>
+			<div class="col-md-4 col-sm-4 col-xs-6">
+				<a href="images/portfolio-img2.jpg" data-lightbox-gallery="portfolio-gallery"><img src="assets/images/portfolio-img2.jpg" alt="portfolio img"></a>
+			</div>
+			<div class="col-md-4 col-sm-4 col-xs-6">
+				<a href="images/portfolio-img3.jpg" data-lightbox-gallery="portfolio-gallery"><img src="assets/images/portfolio-img3.jpg" alt="portfolio img"></a>
+			</div>
             
-            <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">hitmeup@gmail.com</a></span></i></li>
-            
-          </ul>
-  
-          <hr>
-          <ul class="social-media-list">
-            <li><a href="#" target="_blank" class="contact-icon">
-              <i class="fa fa-github" aria-hidden="true"></i></a>
-            </li>
-            <li><a href="#" target="_blank" class="contact-icon">
-              <i class="fa fa-codepen" aria-hidden="true"></i></a>
-            </li>
-            <li><a href="#" target="_blank" class="contact-icon">
-              <i class="fa fa-twitter" aria-hidden="true"></i></a>
-            </li>
-            <li><a href="#" target="_blank" class="contact-icon">
-              <i class="fa fa-instagram" aria-hidden="true"></i></a>
-            </li>       
-          </ul>
-          <hr>
-  
-          <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
-  
-        </div>
-      
-    </div>
-    
-  </section>  
-    
-    
- </div>
-  
+			<div class="col-md-3 col-sm-6 col-xs-6">
+				<a href="images/portfolio-img4.jpg" data-lightbox-gallery="portfolio-gallery"><img src="assets/images/portfolio-img4.jpg" alt="portfolio img"></a>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-6">
+				<a href="images/portfolio-img5.jpg" data-lightbox-gallery="portfolio-gallery"><img src="assets/images/portfolio-img5.jpg" alt="portfolio img"></a>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-6">
+				<a href="images/portfolio-img6.jpg" data-lightbox-gallery="portfolio-gallery"><img src="assets/images/portfolio-img6.jpg" alt="portfolio img"></a>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<a href="images/portfolio-img7.jpg" data-lightbox-gallery="portfolio-gallery"><img src="assets/images/portfolio-img7.jpg" alt="portfolio img"></a>
+			</div>
+			<div class="col-md-12 col-sm-12">
+				<a rel="nofollow" href="http://www.templatemo.com/tag/darkgray" class="btn btn-default">View More</a>
+			</div>
+		</div>
+	</div>
+</div>	
+</div>
+<div>
+  <app-footer></app-footer>
 </div>
