@@ -22,7 +22,7 @@ const routes: Routes = [
     children: [
       { path: "", component: MainComponent , canActivate: [AuthedGuard] },
       { path: "signup", component: SignupComponent , canActivate: [GuestGuard] },
-      { path: "home", component: HomeComponent  },
+      { path: "home", component: HomeComponent , canActivate: [GuestGuard] },
       { path: "login", component: LoginComponent , canActivate: [GuestGuard] },
       { path: "ticket-list", component: TicketListComponent , canActivate: [GuestGuard] },
       {path:"profile",component:ProfileComponent},

@@ -5,13 +5,13 @@ import { ConfigService } from './config.service';
 @Injectable({
   providedIn: 'root'
 })
-export class SuggestionService {
+export class PostService {
 
   constructor(private http: HttpClient, private config: ConfigService) {}
 
-  recommendation() {
+  create_post( form ) {
     return this.http
-    .get(`/api/auth/recommended`)
+    .post(`/post/add/`, form )
     .toPromise()
     .then( (response:any) => {
       console.log(response)
@@ -19,8 +19,8 @@ export class SuggestionService {
     })
   }
 
-  searchByName( name ) {
-    return this.http.get(`/api/auth/recherchePerName/${name}/`)
+  posts_list() {
+    return this.http.get(`/post/liste/`)
     .toPromise()
     .then( (response) => {
       console.log(response)
@@ -28,12 +28,4 @@ export class SuggestionService {
     })
   }
 
-  searchByInfo( job , address ) {
-    return this.http.get(`/api/auth/recherchePerCat/${job}/${address}/`)
-    .toPromise()
-    .then( (response) => {
-      console.log(response)
-      return response
-    })
-  }
 }

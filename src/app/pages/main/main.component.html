@@ -1,5 +1,5 @@
 <div class="wraper">
-    <div class="side container bg-body cardx">
+    <div class="side container bg-body card">
         <div class="top-container"> <img src="https://i.imgur.com/G1pXs7D.jpg"
                 class="img-fluid profile-image rounded-circle mx-3" width="70">
             <div class="ml-3">
@@ -16,54 +16,22 @@
         </div>
         <div *ngIf="!user.employee ; else dashboardLink" class="my-3">
             do you want to become a Worker? <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                class="btn btn-primary"> Request now </button>
+                class="btn btn-primary btn-sm"> Request now </button>
         </div>
         <ng-template #dashboardLink>
             <div class="my-3">
-                <a href=" /app/worker-profile" class="btn btn-primary">go to dashboard</a>
-                <!-- switch to Worker profile ? <button type="button"   
-                    class="btn btn-primary btn-sm" > Go to dashboard </button> -->
-                  
-            </div>
-            <div>
-               
+                switch to Worker profile ? <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    class="btn btn-primary btn-sm"> Go to dashboard </button>
             </div>
         </ng-template>
 
         <div class="recent-border mt-4"> <span class="recent-orders">Recent orders</span> </div>
         <div class="wishlist-border pt-2"> <span class="wishlist">Wishlist</span> </div>
         <div class="fashion-studio-border pt-2"> <span class="fashion-studio">Fashion studio</span> </div>
-    </div> 
-    <div class="main container bg-body">
-        <div class="body">
-        <div class="container">
-            <div class="card" *ngFor="let c of [1,2,3,4,5,6]">
-              <div class="card-header">
-                <img src="../../../assets/img/clark-young-fQxMGkYXqFU-unsplash.jpg" alt="rover" />
-              </div>
-              <div class="card-body">
-                  <!-- this calss below can take more than tag-teal : tag-purple / tag-pink -->
-                <span class="tag tag-teal">technology</span>
-                <h4 class="techno">
-                  Why is the Tesla Cybertruck designed the way it
-                  is?
-                </h4 >
-                <p>
-                  An exploration into the truck's polarising design
-                </p>
-                <div class="user">
-                  <img src="../../../assets/img/mike.jpg" alt="user" />
-                  <div class="user-info">
-                    <h5>July Dec</h5>
-                    <small>2h ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-           
     </div>
-</div>
+    <div class="main container bg-body">
+
+    </div>
 </div>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -83,7 +51,7 @@
                     [ngModelOptions]="{standalone: true}" />
                 <i class="fa fa-key"></i>
                 <div>
-                    <button class="btn" > Request </button>
+                    <button class="btn" (click)="requestRole()"> Request </button>
                 </div>
             </form>
         </div>

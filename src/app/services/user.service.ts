@@ -68,7 +68,7 @@ export class UserService {
       localStorage.removeItem('user')
       localStorage.removeItem('token')
     }
-    return this.http.delete(`/api/auth/logout`)
+    return this.http.post(`/api/auth/logout`,{})
     .toPromise()
     .then( (response) => {
       console.log(response) 
@@ -82,7 +82,7 @@ export class UserService {
   }
 
   updateProfile( form ) {
-    return this.http.post(`/api/auth/updateInfo/client`, form )
+    return this.http.put(`/api/auth/updateInfo/client`, form )
     .toPromise()
     .then( (response) => {
       console.log(response) 
