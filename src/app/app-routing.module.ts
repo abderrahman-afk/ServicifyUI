@@ -13,6 +13,7 @@ import { MainComponent } from "./pages/main/main.component";
 import { GuestGuard } from "./auth/guest.guard";
 import { AuthedGuard } from "./auth/authed.guard";
 import { ProfileComponent } from "./components/profile/profile.component";
+import { WorkerProfileComponent } from "./pages/worker-profile/worker-profile.component";
 
 const routes: Routes = [
   {
@@ -21,10 +22,11 @@ const routes: Routes = [
     children: [
       { path: "", component: MainComponent , canActivate: [AuthedGuard] },
       { path: "signup", component: SignupComponent , canActivate: [GuestGuard] },
-      { path: "home", component: HomeComponent , canActivate: [GuestGuard] },
+      { path: "home", component: HomeComponent  },
       { path: "login", component: LoginComponent , canActivate: [GuestGuard] },
       { path: "ticket-list", component: TicketListComponent , canActivate: [GuestGuard] },
-      {path:"profile",component:ProfileComponent}
+      {path:"profile",component:ProfileComponent},
+      {path:"worker-profile",component:WorkerProfileComponent}
     ],
   }, { path: '', redirectTo: '/app/home', pathMatch: 'full' },
   {
@@ -32,9 +34,9 @@ const routes: Routes = [
     component: AdminLayoutComponent,
     canActivate: [AuthedGuard] ,
     children: [
-      { path: "clients", component: AdminClientsComponent },
-      { path: "workers", component: AdminWorkersComponent },
-      { path: "requests", component: AdminRequestsComponent },
+      { path: "clients", component: AdminClientsComponent,canActivate: [AuthedGuard] },
+      { path: "workers", component: AdminWorkersComponent,canActivate: [AuthedGuard] },
+      { path: "requests", component: AdminRequestsComponent,canActivate: [AuthedGuard] },
     ],
   },
 ];

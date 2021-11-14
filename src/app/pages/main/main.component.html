@@ -20,8 +20,13 @@
         </div>
         <ng-template #dashboardLink>
             <div class="my-3">
-                switch to Worker profile ? <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                    class="btn btn-primary btn-sm"> Go to dashboard </button>
+                <a href=" /app/worker-profile" class="btn btn-primary btn-sm">go to dashboard</a>
+                <!-- switch to Worker profile ? <button type="button"   
+                    class="btn btn-primary btn-sm" > Go to dashboard </button> -->
+                  
+            </div>
+            <div>
+               
             </div>
         </ng-template>
 
@@ -51,7 +56,7 @@
                     [ngModelOptions]="{standalone: true}" />
                 <i class="fa fa-key"></i>
                 <div>
-                    <button class="btn" (click)="requestRole()"> Request </button>
+                    <button class="btn" > Request </button>
                 </div>
             </form>
         </div>

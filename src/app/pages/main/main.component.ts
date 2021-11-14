@@ -12,7 +12,7 @@ export class MainComponent implements OnInit {
 
   requestform: FormGroup;
   user: User
-  request = {}
+  request:any = {}
 
   constructor(private fb: FormBuilder, private userService: UserService) { }
 
