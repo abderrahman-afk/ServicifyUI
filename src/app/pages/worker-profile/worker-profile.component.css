@@ -102,6 +102,23 @@ a .material-icons {
     align-items: center;
 }
 
+.main {
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
+    border-radius: 32px;
+    background: white;
+}
+
+.profile-page {
+    background: rgb(247, 245, 245);
+    width: 100%;
+    height:calc(100%);
+    background-image: url('./../../../assets/img/presentation_bg.png');
+    background-repeat: no-repeat;
+    background-size: contain!important;
+    background-position: 100%!important;
+    padding: 6% 5% 3% 5%;
+}
+
 .header-filter:after, .header-filter:before {
     position: absolute;
     z-index: 3;
@@ -118,19 +135,6 @@ a .material-icons {
      
 }
 
-.main-raised {
-    margin: -60px 30px 0;
-    border-radius: 6px;
-    box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
-}
-
-.main {
-    background: #FFF;
-    position: absolute;
-    top: 50%;
-    left: 80px;
-    z-index: 3;
-}
 
 .profile-page .profile {
     text-align: center;

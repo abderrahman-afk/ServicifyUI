@@ -20,8 +20,8 @@
         </div>
         <ng-template #dashboardLink>
             <div class="my-3">
-                switch to Worker profile ? <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                    class="btn btn-primary btn-sm"> Go to dashboard </button>
+                switch to Worker profile ? <a type="button"
+                [routerLink]="['worker/profile']"  class="btn btn-primary btn-sm"> Go to dashboard </a>
             </div>
         </ng-template>
 

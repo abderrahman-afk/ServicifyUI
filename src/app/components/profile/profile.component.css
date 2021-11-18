@@ -1,5 +1,21 @@
-body {
-    background: rgb(99, 39, 120)
+.wraper {
+    background: rgb(247, 245, 245);
+    width: 100%;
+    height:calc(100%);
+    background-image: url('./../../../assets/img/presentation_bg.png');
+    background-repeat: no-repeat;
+    background-size: contain!important;
+    background-position: 100%!important;
+    display: flex;
+    padding: 3% 5% 3% 5%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container {
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
+    border-radius: 32px;
+    background: white;
 }
 
 .form-control:focus {

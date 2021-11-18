@@ -1,6 +1,6 @@
 {
     "/service/*": {
-        "target": "http://159.223.28.104/",
+        "target": "http://159.223.28.104",
         "secure": false,
         "logLevel": "debug",
         "pathRewrite": {"^/service" : ""}
