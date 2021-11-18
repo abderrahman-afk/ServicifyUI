@@ -15,7 +15,7 @@ export class UserService {
 
   register(account) {
     return this.http
-    .post(`/api/auth/register`, account, this.config.guestRequest)
+    .post(`/service/api/auth/register`, account, this.config.guestRequest)
     .toPromise()
     .then( (response:any) => {
       console.log(response)
@@ -26,7 +26,7 @@ export class UserService {
   }
 
   login(credentials) {
-    return this.http.post(`/api/auth/login`, credentials,  this.config.guestRequest)
+    return this.http.post(`/service/api/auth/login`, credentials,  this.config.guestRequest)
     .toPromise()
     .then( (response) => {
       console.log(response)
@@ -43,7 +43,7 @@ export class UserService {
   }
 
   requestRole( form ) {
-    return this.http.post(`/api/auth/send`, form)
+    return this.http.post(`/service/api/auth/send`, form)
     .toPromise()
     .then( (response) => {
       console.log(response)
@@ -68,7 +68,7 @@ export class UserService {
       localStorage.removeItem('user')
       localStorage.removeItem('token')
     }
-    return this.http.post(`/api/auth/logout`,{})
+    return this.http.post(`/service/api/auth/logout`,{})
     .toPromise()
     .then( (response) => {
       console.log(response) 
@@ -82,7 +82,7 @@ export class UserService {
   }
 
   updateProfile( form ) {
-    return this.http.put(`/api/auth/updateInfo/client`, form )
+    return this.http.put(`/service/api/auth/updateInfo/client`, form )
     .toPromise()
     .then( (response) => {
       console.log(response) 

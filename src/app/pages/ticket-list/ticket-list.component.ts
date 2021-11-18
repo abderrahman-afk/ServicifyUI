@@ -14,8 +14,8 @@ export class TicketListComponent implements OnInit {
 
   ngOnInit() { 
     this.ticketService.listTickets()
-    .then( (response) => {
-      
+    .then( (response:any) => {
+       this.tickets = response
     })
     .catch( e => console.error(e))
   }

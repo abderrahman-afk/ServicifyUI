@@ -32,8 +32,7 @@
               "./node_modules/alertifyjs/build/css/themes/bootstrap.min.css"
             ],
             "scripts": [
-            "./node_modules/alertifyjs/build/alertify.min.js"
-            
+              "./node_modules/alertifyjs/build/alertify.min.js"
             ]
           },
           "configurations": {
@@ -123,6 +122,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ServicifyUI"
+    }
+  },
+  "defaultProject": "ServicifyUI",
+  "cli": {
+    "analytics": "d3513610-f7a0-4b3a-8c78-8c45d62cb6bd"
+  }
 }

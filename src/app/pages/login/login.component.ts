@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     this.userService.login(this.user)
       .then( () => {
           this.alertyfy.success("You logged in successfully");
-          this.router.navigate(['/app/'])
+          this.router.navigate(['/'])
         })
       .catch((e) => {
         this.alertyfy.error("check your credentials");

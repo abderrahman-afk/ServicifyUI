@@ -11,7 +11,7 @@ export class AdminService {
 
   clients() {
     return this.http
-    .get(`/api/auth/list_client`)
+    .get(`/service/api/auth/list_client`)
     .toPromise()
     .then( (response:any) => {
       console.log(response)
@@ -21,7 +21,7 @@ export class AdminService {
 
   workers() {
     return this.http
-    .get(`/api/auth/list_ouvrier`)
+    .get(`/service/api/auth/list_ouvrier`)
     .toPromise()
     .then( (response:any) => {
       console.log(response)
@@ -31,7 +31,7 @@ export class AdminService {
 
   approveRequest(id) {
     return this.http
-    .put(`/api/auth/accept_employees/${id}/`,{})
+    .put(`/service/api/auth/accept_employees/${id}/`,{})
     .toPromise()
     .then( (response:any) => {
       console.log(response)
@@ -40,7 +40,7 @@ export class AdminService {
   }
 
   rejectRequest(id) {
-    return this.http.put(`/api/auth/refuse_role/${id}/`,{})
+    return this.http.put(`/service/api/auth/refuse_role/${id}/`,{})
     .toPromise()
     .then( (response) => {
       console.log(response)
@@ -49,7 +49,7 @@ export class AdminService {
   }
 
   requests() {
-    return this.http.get(`/api/auth/listRequest/`)
+    return this.http.get(`/service/api/auth/listRequest/`)
     .toPromise()
     .then( (response:any) => {
       console.log(response)

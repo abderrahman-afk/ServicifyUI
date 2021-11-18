@@ -11,7 +11,7 @@ export class SuggestionService {
 
   recommendation() {
     return this.http
-    .get(`/api/auth/recommended`)
+    .get(`/service/api/auth/recommended`)
     .toPromise()
     .then( (response:any) => {
       console.log(response)
@@ -20,7 +20,7 @@ export class SuggestionService {
   }
 
   searchByName( name ) {
-    return this.http.get(`/api/auth/recherchePerName/${name}/`)
+    return this.http.get(`/service/api/auth/recherchePerName/${name}/`)
     .toPromise()
     .then( (response) => {
       console.log(response)
@@ -29,7 +29,7 @@ export class SuggestionService {
   }
 
   searchByInfo( job , address ) {
-    return this.http.get(`/api/auth/recherchePerCat/${job}/${address}/`)
+    return this.http.get(`/service/api/auth/recherchePerCat/${job}/${address}/`)
     .toPromise()
     .then( (response) => {
       console.log(response)

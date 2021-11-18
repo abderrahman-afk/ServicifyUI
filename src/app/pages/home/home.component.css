@@ -1,5 +1,10 @@
  
-
+@import "../../../assets/css/bootstrap.min.css";
+@import "../../../assets/css/bootstrap.min.css";
+@import "../../../assets/css/font-awesome.min.css";
+@import "../../../assets/css/nivo-lightbox.css";
+@import "../../../assets/css/nivo_themes/default/default.css";
+@import "../../../assets/css/templatemo-style.css" ;
 
 .card {
     /* Add shadows to create the "card" effect */

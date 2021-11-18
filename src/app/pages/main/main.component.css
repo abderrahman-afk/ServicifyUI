@@ -1,29 +1,58 @@
 .wraper {
     background: rgb(247, 245, 245);
     width: 100%;
-    height: 100vh;
+    height:calc(100%);
+    background-image: url('./../../../assets/img/presentation_bg.png');
+    background-repeat: no-repeat;
+    background-size: contain!important;
+    background-position: 100%!important;
     display: flex;
     padding: 3% 5% 3% 5%;
     flex-direction: row;
     justify-content: space-around;
 }
 
+.tab-pane  {
+    height:850px;
+    overflow-y: scroll;
+    width: 100%;
+    margin-top: 10px;
+    overflow-y:scroll;
+}
+
+.tab-pane::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+.tab-pane::-webkit-scrollbar-track {
+    background-color: #f7f4f4;
+    border-radius: 100px;
+}
+ 
+.tab-pane::-webkit-scrollbar-thumb {
+    background-color: #5957f9;
+    border-radius: 100px;
+}
+
+.tab-content {
+    height: 100%;
+    width: 100%;
+}
+
 .side {
     width: 25%;
+    height: auto ;
 }
 
 .main {
     width: 60%;
+    height: 1000px;
 }
 
 .container {
     box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
     border-radius: 32px;
     background: white;
-}
-
-body {
-    background-color: #eee
 }
 
 .card {
@@ -106,42 +135,26 @@ body {
     font-weight: bold
 }
 
-.recent-border {
+
+.link-active, .link-span:hover {
+    text-decoration: none;
+    padding-left: 10px;
     border-left: 2px solid #5957f9;
     display: flex;
-    align-items: center
-}
-
-.recent-border:hover {
-    border-bottom: 1px solid #dee2e6 !important
-}
-
-.recent-orders {
+    align-items: center;
     font-size: 16px;
     font-weight: 700;
-    color: #5957f9;
+    color: #5957f9 !important;
     margin-left: 2px
 }
 
-.wishlist {
+.link-span {
+    text-decoration: none;
     font-size: 16px;
     font-weight: 700;
     color: #272727
 }
 
-.wishlist-border:hover {
-    border-bottom: 1px solid #dee2e6 !important
-}
-
-.fashion-studio {
-    font-size: 16px;
-    font-weight: 700;
-    color: #272727
-}
-
-.fashion-studio-border:hover {
-    border-bottom: 1px solid #dee2e6 !important
-}
 
 body {
     font-family: "Open Sans", sans-serif;
@@ -160,16 +173,8 @@ body {
 * {
     box-sizing: border-box;
 }
-.wrapper {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    min-height: 100%;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.85);
-}
+
+
 .request {
     border-radius: 2px 2px 5px 5px;
     padding: 10px 20px 20px 20px;

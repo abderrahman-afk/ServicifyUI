@@ -11,7 +11,7 @@ export class PostService {
 
   create_post( form ) {
     return this.http
-    .post(`/post/add/`, form )
+    .post(`/service/post/add/`, form )
     .toPromise()
     .then( (response:any) => {
       console.log(response)
@@ -20,7 +20,7 @@ export class PostService {
   }
 
   posts_list() {
-    return this.http.get(`/post/liste/`)
+    return this.http.get(`/service/post/liste/`)
     .toPromise()
     .then( (response) => {
       console.log(response)

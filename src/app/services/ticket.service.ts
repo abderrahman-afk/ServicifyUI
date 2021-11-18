@@ -11,7 +11,7 @@ export class TicketService {
 
   sendTicket(id , form ) {
     return this.http
-    .post(`/ticket/send/${id}/`, form )
+    .post(`/service/ticket/send/${id}/`, form )
     .toPromise()
     .then( (response:any) => {
       console.log(response)
@@ -20,7 +20,7 @@ export class TicketService {
   }
 
   listTickets() {
-    return this.http.get(`/ticket/liste`)
+    return this.http.get(`/service/ticket/liste`)
     .toPromise()
     .then( (response) => {
       console.log(response)
