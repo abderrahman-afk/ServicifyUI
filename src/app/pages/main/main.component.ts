@@ -18,6 +18,7 @@ export class MainComponent implements OnInit {
   category: Array<string> = ["POPULAR", "TECHNOLOGY", "DESIGN"];
   posts = [];
   recommended = [];
+  search = []
 
   constructor(
     private fb: FormBuilder,
@@ -37,6 +38,11 @@ export class MainComponent implements OnInit {
     this.suggetionService.recommendation()
     .then((response:any) => {
       this.recommended = response
+    })
+    .catch(this.errorLoading);
+    this.suggetionService.searchByName('choco')
+    .then((response:any) => {
+      this.search = response
     })
     .catch(this.errorLoading);
     this.postService.posts_list().then().catch();

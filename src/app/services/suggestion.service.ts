@@ -10,8 +10,7 @@ export class SuggestionService {
   constructor(private http: HttpClient, private config: ConfigService) {}
 
   recommendation() {
-    return this.http
-    .get(`/service/api/auth/recommended`)
+    return this.http.get(`/service/api/auth/sugUser/`)
     .toPromise()
     .then( (response:any) => {
       console.log(response)
