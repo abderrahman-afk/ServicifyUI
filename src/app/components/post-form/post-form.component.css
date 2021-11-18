@@ -3,8 +3,11 @@ body{
     margin-top:20px;
 }
 
-input, input:hover , input:focus {
-    border: none;
+input , textarea, select {
+  width: 100%;
+  display: block;
+  background-color: rgb(247, 247, 247);
+  border: 1px solid #bbbbbb;
 }
 
 .card-margin {

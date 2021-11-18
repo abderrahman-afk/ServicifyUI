@@ -19,6 +19,7 @@ export class MainComponent implements OnInit {
   posts = [];
   recommended = [];
   search = []
+  query = ''
 
   constructor(
     private fb: FormBuilder,
@@ -63,6 +64,14 @@ export class MainComponent implements OnInit {
   errorLoading(e) {
     console.log(e)
     this.alertyfy.error("error loading data")
+  }
+
+  searchWorker() {
+    this.suggetionService.searchByName(this.query)
+    .then((response:any) => {
+      this.search = response
+    })
+    .catch(this.errorLoading);
   }
   
 }

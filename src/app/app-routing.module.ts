@@ -28,7 +28,7 @@ const routes: Routes = [
       { path: "login", component: LoginComponent, canActivate: [GuestGuard] },
       { path: "ticket-list", component: TicketListComponent, canActivate: [AuthedGuard] },
       { path: "profile", component: ProfileComponent, canActivate: [AuthedGuard] },
-      { path: "worker/profile", component: WorkerProfileComponent, canActivate: [AuthedGuard, /*WorkerGuard*/] }
+      { path: "worker/profile/:id", component: WorkerProfileComponent, canActivate: [AuthedGuard, /*WorkerGuard*/] }
     ],
   }, { path: '', redirectTo: '/app/home', pathMatch: 'full' },
   {

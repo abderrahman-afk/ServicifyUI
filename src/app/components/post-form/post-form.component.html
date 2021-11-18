@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="">
-            <div class="card border-primary card-margin p-5">
+            <div class="card  card-margin p-5">
                 <form  #postform="ngForm" (ngSubmit)="postClient()" >
                     <fieldset>
                         <div class="form-group">
@@ -14,7 +14,7 @@
                         </div>
                         <div>
                             <label for="exampleFormControlSelect1"> Categorie </label>
-                            <select class="" [(ngModel)]="post.cat"  name="cat" id="exampleFormControlSelect1">
+                            <select class="form-control" [(ngModel)]="post.cat"  name="cat" id="exampleFormControlSelect1">
                               <option>1</option>
                               <option>2</option>
                               <option>3</option>

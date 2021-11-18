@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class WorkerCardComponent implements OnInit {
 
-  @Input('worker') post = {}
+  @Input('worker') worker = {}
 
   constructor() { }
 
