@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Role } from '../auth/Role';
 import { User } from '../class/user';
 import { AlertyfyService } from './alertyfy.service';
 import { ConfigService } from './config.service';
@@ -37,9 +38,10 @@ export class UserService {
   }
 
   setUserAndToken ( response ) {
-    this.user =  new User( response.user.nom , response.user.email , response.user.is_employees, response.user.image )
+    this.user =  new User( response.user.nom , response.user.email , response.user.is_employees, response.user.image || '' )
     localStorage.setItem('user', this.user.toJSON())
     localStorage.setItem('token',response.token)
+    localStorage.setItem('role', response.user.groups ? Role.Admin : (response.user.is_employees ? Role.Worker : "client") )
   }
 
   requestRole( form ) {
@@ -67,6 +69,7 @@ export class UserService {
     const clear = () => {
       localStorage.removeItem('user')
       localStorage.removeItem('token')
+      localStorage.removeItem('role')
     }
     return this.http.post(`/service/api/auth/logout`,{})
     .toPromise()
@@ -88,6 +91,10 @@ export class UserService {
       console.log(response) 
       return response
     })
+  }
+
+  getRole() {
+    return localStorage.getItem('role')
   }
 
 }

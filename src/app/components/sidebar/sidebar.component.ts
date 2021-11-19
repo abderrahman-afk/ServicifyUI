@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
 
 declare interface RouteInfo {
     path: string;
@@ -11,7 +13,6 @@ export const ROUTES: RouteInfo[] = [
     { path: '/administration/clients', title: 'Clients',  icon:'bi bi-person-lines-fill', class: '' },
     { path: '/administration/workers', title: 'Workers',  icon:'bi bi-briefcase-fill', class: '' },
     { path: '/administration/requests', title: 'Requests',  icon:'bi bi-envelope-plus-fill', class: '' },
-    { path: '/administration/logout', title: 'logout',  icon:'bi bi-door-closed-fill', class: 'active active-pro text-center' }
 
 ];
 
@@ -23,15 +24,22 @@ export const ROUTES: RouteInfo[] = [
 export class SidebarComponent implements OnInit {
   menuItems: any[];
 
-  constructor() { }
+  constructor(private userService:UserService, private router: Router) { }
 
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);
   }
+
   isMobileMenu() {
       if ( window.innerWidth > 991) {
           return false;
       }
       return true;
   };
+
+  logout() {
+    this.userService.logout()
+    .then(() => this.router.navigate(['/home']))
+    .catch((e) => console.error(e))
+  }
 }

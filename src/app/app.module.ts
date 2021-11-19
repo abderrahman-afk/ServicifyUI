@@ -27,6 +27,7 @@ import { WorkerProfileComponent } from './pages/worker-profile/worker-profile.co
 import { PostComponent } from './components/post/post.component';
 import { PostFormComponent } from './components/post-form/post-form.component';
 import { WorkerCardComponent } from './components/worker-card/worker-card.component';
+import { LoginAdminComponent } from './pages/login-admin/login-admin.component';
 //import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
@@ -52,7 +53,8 @@ import { WorkerCardComponent } from './components/worker-card/worker-card.compon
     WorkerProfileComponent,
     PostComponent,
     PostFormComponent,
-    WorkerCardComponent
+    WorkerCardComponent,
+    LoginAdminComponent
   ],
   imports: [
     HttpClientModule,

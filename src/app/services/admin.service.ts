@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ConfigService } from './config.service';
+import { UserService } from './user.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AdminService {
 
-  constructor(private http: HttpClient, private config: ConfigService) {}
+  constructor(private http: HttpClient, private config: ConfigService , private userService: UserService) {}
 
   clients() {
     return this.http
@@ -53,6 +54,16 @@ export class AdminService {
     .toPromise()
     .then( (response:any) => {
       console.log(response)
+      return response
+    })
+  }
+
+  login(form) {
+    return this.http.post(`/service/api/auth/admin/login`, form , this.config.guestRequest )
+    .toPromise()
+    .then( (response:any) => {
+      console.log(response)
+      this.userService.setUserAndToken(response)
       return response
     })
   }

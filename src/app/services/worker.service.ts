@@ -11,7 +11,7 @@ export class WorkerService {
 
   worker( id ) {
     return this.http
-    .get(`/service/ouvrier/${id}/`)
+    .get(`/service/api/auth/ouvrier/${id}/`)
     .toPromise()
     .then( (response:any) => {
       console.log(response)

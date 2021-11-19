@@ -16,6 +16,7 @@ import { ProfileComponent } from "./components/profile/profile.component";
 import { WorkerProfileComponent } from "./pages/worker-profile/worker-profile.component";
 import { AdminGuard } from "./auth/admin.guard";
 import { WorkerGuard } from "./auth/worker.guard";
+import { LoginAdminComponent } from "./pages/login-admin/login-admin.component";
 
 const routes: Routes = [
   {
@@ -36,10 +37,16 @@ const routes: Routes = [
     component: AdminLayoutComponent,
     canActivate: [AuthedGuard],
     children: [
+      { path: "home", component: AdminClientsComponent, canActivate: [AdminGuard] },
       { path: "clients", component: AdminClientsComponent, canActivate: [AdminGuard] },
       { path: "workers", component: AdminWorkersComponent, canActivate: [AdminGuard] },
       { path: "requests", component: AdminRequestsComponent, canActivate: [AdminGuard] },
     ],
+  },
+  {
+    path: "administration/login",
+    component: LoginAdminComponent,
+    canActivate: [GuestGuard],
   },
 ];
 

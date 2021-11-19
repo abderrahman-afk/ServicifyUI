@@ -8,10 +8,10 @@
           <div class="col-md-6 ml-auto mr-auto">
             <div class="profile">
               <div class="avatar">
-                <img [src]="user.image" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+                <img [src]="'http://159.223.28.104' +  user.client.image" alt="Circle Image" class="img-raised rounded-circle img-fluid">
               </div>
               <div class="name">
-                <h3 class="title" style="color: black;">{{ user.username | titlecase}}</h3>
+                <h3 class="title" style="color: black;">{{ user.client.nom | titlecase}}</h3>
                 <h5>{{ user.job | titlecase }}</h5>
                 <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
                 <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
