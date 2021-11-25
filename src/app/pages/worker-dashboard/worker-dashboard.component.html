@@ -1,0 +1,104 @@
+<div class="wraper">
+    <div class="side">
+        <div class="container bg-body p-5 profile-card">
+            <div class="top-container">
+                <img [src]="user.image" class="img-fluid profile-image rounded-circle mx-3" width="70">
+                <div class="ml-3">
+                    <h5 class="name"> {{ user.username }} </h5>
+                    <p class="mail"> {{ user.email }} </p>
+                </div>
+            </div>
+            <hr class="my-3" />
+
+            <div class="media">
+                <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
+                <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>
+            </div>
+        </div>
+        <div class="container bg-body p-5 my-4">
+
+        </div>
+    </div>
+    <div class="main">
+        <div class="stat-container mb-5">
+            <div class="card text-white  mb-2">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <p class="card-text">59</p>
+                </div>
+            </div>
+            <div class="card text-white mb-2">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <p class="card-text">7.3</p>
+                </div>
+            </div>
+            <div class="card text-white mb-2">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <p class="card-text">157</p>
+                </div>
+            </div>
+            <div class="card text-white mb-2">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <p class="card-text">200</p>
+                </div>
+            </div>
+        </div>
+        <div class="container bg-body p-5 mb-5 nav-container ">
+            <div>
+                <a class="nav-link waves-effect waves-light" href="#">
+                    <i class="fas fa-ticket-alt"></i> Tickets
+                    <span class="sr-only">(current)</span>
+                </a>
+            </div>
+            <div>
+                <a class="nav-link waves-effect waves-light" href="#">
+                    <i class="fas fa-envelope"></i> clients
+                    <span class="sr-only">(current)</span>
+                </a>
+            </div>
+            <div>
+                <a class="nav-link waves-effect waves-light" href="#">
+                    <i class="fas fa-envelope"></i> Reviews
+                    <span class="sr-only">(current)</span>
+                </a>
+            </div>
+        </div>
+        <div class="container bg-body p-5">
+            <div>
+                <h3 class="title">
+                    see your tickets
+                </h3>
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">client</th>
+                            <th scope="col">adresse</th>
+                            <th scope="col">price</th>
+                            <th scope="col"></th>
+
+                            <th scope="col"> action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let t of tickets">
+                            <th scope="row">{{t}}</th>
+                            <td>null</td>
+                            <td>ariana</td>
+                            <td>0</td>
+                            <td><button class="btn btn-warning"> <i class="fa fa-eye"></i> see more</button></td>
+                            <td><button class="btn btn-primary"> accept</button> <button
+                                    class="btn btn-danger">decline</button> </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

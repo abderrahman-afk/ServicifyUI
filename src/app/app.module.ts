@@ -28,7 +28,9 @@ import { PostComponent } from './components/post/post.component';
 import { PostFormComponent } from './components/post-form/post-form.component';
 import { WorkerCardComponent } from './components/worker-card/worker-card.component';
 import { LoginAdminComponent } from './pages/login-admin/login-admin.component';
+import { WorkerDashboardComponent } from './pages/worker-dashboard/worker-dashboard.component';
 //import { ToastrModule } from 'ngx-toastr';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -54,9 +56,11 @@ import { LoginAdminComponent } from './pages/login-admin/login-admin.component';
     PostComponent,
     PostFormComponent,
     WorkerCardComponent,
-    LoginAdminComponent
+    LoginAdminComponent,
+    WorkerDashboardComponent
   ],
   imports: [
+    NgbModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,

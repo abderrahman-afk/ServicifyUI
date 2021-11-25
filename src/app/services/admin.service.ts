@@ -12,7 +12,7 @@ export class AdminService {
 
   clients() {
     return this.http
-    .get(`/service/api/auth/list_client`)
+    .get(`/service/api/auth/list_client/`)
     .toPromise()
     .then( (response:any) => {
       console.log(response)
@@ -22,7 +22,7 @@ export class AdminService {
 
   workers() {
     return this.http
-    .get(`/service/api/auth/list_ouvrier`)
+    .get(`/service/api/auth/list_ouvrier/`)
     .toPromise()
     .then( (response:any) => {
       console.log(response)
