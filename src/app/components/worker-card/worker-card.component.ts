@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { TicketService } from 'src/app/services/ticket.service';
 
 @Component({
   selector: 'app-worker-card',
@@ -7,11 +8,18 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class WorkerCardComponent implements OnInit {
 
-  @Input('worker') worker = {}
+  @Input('worker') worker
 
-  constructor() { }
+  post = { content: ''}
+
+  constructor(private ticketService:TicketService ) {}
 
   ngOnInit() {
+    console.log(this.worker)
+  }
+
+  sendTicket() {
+    this.ticketService.sendTicket(this.worker.id ,this.post).then(() => {}).catch(e => console.log(e))
   }
 
 }

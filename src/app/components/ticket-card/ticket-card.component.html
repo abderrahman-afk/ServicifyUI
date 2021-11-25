@@ -1,25 +1,19 @@
-<div class="card" >
+<div class="card">
     <div class="course_image image-wrapper">
-        
-        <img [src]=ticket_child.profile alt="" class="card-img-top" height="250px" width="200px">
-        <ul class="list-inline text-center member-icons animate">
-           <li class="list-inline-item"><a href="/course-detail/{{ticket_child.Id}}"><button  class="btn btn-warning"  >  
-             <i class="fa fa-edit">accept</i></button></a></li> 
-             <li class="list-inline-item"><a href="/course-detail/{{ticket_child.Id}}"><button  class="btn btn-danger"  >  
-                <i class="fa fa-edit">decline</i></button></a></li> 
-                <li class="list-inline-item"><a href="/course-detail/{{ticket_child.Id}}"><button  class="btn btn-light"  >  
-                    <i class="fa fa-edit">details</i></button></a></li> 
-       </ul>  
-    </div>
-    
-    <div class="course_body">
-        <h3 > job : {{ticket_child.job}} </h3>
-        <div > client name : {{ ticket_child.client }}</div>
 
+        <img src="https://eugeneloj.typepad.com/.a/6a00d834516e6369e20134888356b5970c-pi" alt="" class="card-img-top"
+            height="250px" width="200px">
+        <ul class="list-inline text-center member-icons animate">
+            <li class="list-inline-item"><button (click)="accept()" class="btn btn-warning">
+                        <i class="fa fa-edit">accept</i></button></li>
+            <li class="list-inline-item"><button (click)="decline()" class="btn btn-danger">
+                        <i class="fa fa-edit">decline</i></button></li>
+            <li class="list-inline-item"><a href="/course-detail/{{ticket_child.Id}}"><button class="btn btn-light">
+                        <i class="fa fa-edit">details</i></button></a></li>
+        </ul>
     </div>
-    <div >
-        <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
-            <div class="course_price ml-auto"> job description :{{ ticket_child.description }} </div>
-        </div>
+    <div class="card-body">
+        <h5 class="card-title"> {{ ticket_child.content }} </h5>
+        <a href="#" class="btn btn-primary"> {{ ticket_child.from_client.nom }} </a>
     </div>
 </div>
