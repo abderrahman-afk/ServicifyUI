@@ -9,6 +9,17 @@
    opacity: 0.5;
 
 }
+
+.ticketForm {
+   display: flex;
+   width: 100%;
+   flex-direction: column;
+}
+
+.ticketForm > * {
+   display: block;
+   width: 100%;
+}
 .card img {
    transform: scale(1,1);
    transition-duration: 500ms;

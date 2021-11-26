@@ -15,6 +15,27 @@ export class AdminRequestsComponent implements OnInit {
   constructor(private adminService: AdminService) {}
 
   ngOnInit() {
+    this.request()
+  }
+
+  approve(id) {
+    this.adminService.approveRequest(id)
+    .then(()=> {
+      this.request()
+
+    })
+    .catch((e) => console.log(e))
+  }
+
+  reject(id) {
+    this.adminService.rejectRequest(id)
+    .then(() => {
+      this.request()
+    })
+    .catch((e) => console.log(e))
+  }
+
+  request() {
     this.adminService.requests().then( requests => {
       this.requests = requests.map( request => { 
         return { 
@@ -32,14 +53,6 @@ export class AdminRequestsComponent implements OnInit {
       })
     })
     .catch((e) => console.log(e))
-  }
-
-  approve(id) {
-    this.adminService.approveRequest(id).catch((e) => console.log(e))
-  }
-
-  reject(id) {
-    this.adminService.rejectRequest(id).catch((e) => console.log(e))
   }
 
 }

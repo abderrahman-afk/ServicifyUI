@@ -28,4 +28,22 @@ export class TicketService {
     })
   }
 
+  acceptTicket(id) {
+    return this.http.put(`/service/ticket/accept/${id}/`,{})
+    .toPromise()
+    .then( (response) => {
+      console.log(response)
+      return response
+    })
+  }
+
+  declineTicket(id) {
+    return this.http.put(`/service/ticket/refuser/${id}/`,{})
+    .toPromise()
+    .then( (response) => {
+      console.log(response)
+      return response
+    })
+  }
+
 }

@@ -41,7 +41,7 @@ export class MainComponent implements OnInit {
       this.recommended = response
     })
     .catch(this.errorLoading);
-    this.suggetionService.searchByName('choco')
+    this.suggetionService.searchByName('')
     .then((response:any) => {
       this.search = response
     })

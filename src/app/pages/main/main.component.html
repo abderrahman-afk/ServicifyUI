@@ -1,7 +1,7 @@
 <div class="wraper">
     <div class="side container bg-body card">
-        <div class="top-container"> <img [src]="user.image"
-                class="img-fluid profile-image rounded-circle mx-3" width="70">
+        <div class="top-container"> <img [src]="user.image" class="img-fluid profile-image rounded-circle mx-3"
+                width="70">
             <div class="ml-3">
                 <h5 class="name"> {{ user.username }} </h5>
                 <p class="mail"> {{ user.email }} </p>
@@ -20,13 +20,15 @@
         </div>
         <ng-template #dashboardLink>
             <div class="my-3">
-                switch to Worker profile ? <a type="button"
-                [routerLink]="['worker/profile']"  class="btn btn-primary btn-sm"> Go to dashboard </a>
+                switch to Worker profile ? <a type="button" [routerLink]="['worker/home']"
+                    class="btn btn-primary btn-sm"> Go to dashboard </a>
             </div>
         </ng-template>
 
-        <div class="link-border mt-4"> <a class="link-span" [routerLink]="['/']" RouterLinkActive="link-active" > Home</a> </div>
-        <div class="link-border mt-4"> <a class="link-span" [routerLink]="['/profile']" RouterLinkActive="link-active" > Profile</a> </div>
+        <div class="link-border mt-4"> <a class="link-span" [routerLink]="['/']" RouterLinkActive="link-active">
+                Home</a> </div>
+        <div class="link-border mt-4"> <a class="link-span" [routerLink]="['/profile']" RouterLinkActive="link-active">
+                Profile</a> </div>
     </div>
     <div class="main container bg-body p-5">
         <div>
@@ -44,17 +46,18 @@
                         type="button" role="tab" aria-controls="contact" aria-selected="false">recommended</button>
                 </li>
             </ul>
-            <div  class="tab-content" id="myTabContent">
+            <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active p-5" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <app-post-form></app-post-form>
-                        <app-post *ngFor="let post of posts" [post]="post"></app-post>
+                    <app-post-form></app-post-form>
+                    <app-post *ngFor="let post of posts" [post]="post"></app-post>
                 </div>
                 <div class="tab-pane fade p-5" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                     <div class="search__container p-5">
                         <p class="search__title">
                             Go ahead, hover over search
                         </p>
-                        <input class="search__input" [(ngModel)]="query" (change)="searchWorker()" type="text" placeholder="Search">
+                        <input class="search__input" [(ngModel)]="query" (keyup)="searchWorker()" type="text"
+                            placeholder="Search">
                     </div>
                     <app-worker-card *ngFor="let worker of search" [worker]="worker"></app-worker-card>
                 </div>
@@ -83,7 +86,7 @@
                     [ngModelOptions]="{standalone: true}" />
                 <i class="fa fa-key"></i>
                 <div>
-                    <button class="btn" > Request </button>
+                    <button class="btn"> Request </button>
                 </div>
             </form>
         </div>
