@@ -18,4 +18,20 @@ export class WorkerService {
       return response
     })
   }
+  // chat(){
+  //   return this.http
+  //   .get(`/service/api/messages`)
+  //   .toPromise()
+  //   .then( (response:any)=>{
+  //     console.log(response);
+  //     return response
+  //   })
+  // }
+
+  // chat(name:any,msg:any): void {
+  //   this.http.post(`/service/api/messages`, {
+  //     username: name,
+  //     message: msg
+  //   }).subscribe(() => msg = '');
+  // }
 }

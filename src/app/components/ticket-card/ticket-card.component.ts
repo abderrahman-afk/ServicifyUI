@@ -1,4 +1,5 @@
 import { Component,Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TicketService } from 'src/app/services/ticket.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class TicketCardComponent implements OnInit {
   @Input("ticket_child") ticket_child;
 
 
-  constructor(private ticketService: TicketService) { }
+  constructor(private ticketService: TicketService,private router:Router) { }
  
   ngOnInit() {
     console.log(this.ticket_child)
@@ -21,6 +22,7 @@ export class TicketCardComponent implements OnInit {
     this.ticketService.acceptTicket(this.ticket_child.id)
     .then()
     .catch(e => console.log(e))
+    this.router.navigate(['/chat'])
   }
 
   decline() {
