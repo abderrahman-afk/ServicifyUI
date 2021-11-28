@@ -32,6 +32,7 @@ import { WorkerDashboardComponent } from './pages/worker-dashboard/worker-dashbo
 //import { ToastrModule } from 'ngx-toastr';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ChatComponent } from './components/chat/chat.component';
+import { AuthComponent } from './components/auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { ChatComponent } from './components/chat/chat.component';
     WorkerCardComponent,
     LoginAdminComponent,
     WorkerDashboardComponent,
-    ChatComponent
+    ChatComponent,
+    AuthComponent
   ],
   imports: [
     NgbModule,

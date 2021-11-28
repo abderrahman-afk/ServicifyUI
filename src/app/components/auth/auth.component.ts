@@ -1,0 +1,55 @@
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AlertyfyService } from 'src/app/services/alertyfy.service';
+import { UserService } from 'src/app/services/user.service';
+
+@Component({
+  selector: 'app-auth',
+  templateUrl: './auth.component.html',
+  styleUrls: ['./auth.component.css']
+})
+export class AuthComponent implements OnInit {
+
+  loginform: FormGroup;
+  user: any = {};
+  signupform : FormGroup;
+
+  constructor(private fb: FormBuilder, private userService: UserService, private router: Router, private alertyfy: AlertyfyService) { }
+
+
+  ngOnInit() {
+    this.loginform = this.fb.group({
+      username: [''],
+      password: ['']
+    })
+    this.signupform = this.fb.group({
+      username: [''],
+      email: ['', [Validators.required, Validators.email]],
+      telephone: [''],
+      password: ['', [Validators.required, Validators.minLength(8)]],
+      dob: [''],
+    })
+
+
+  }
+
+  signup() {
+    this.userService.register(this.signupform.value)
+      .then(() => this.router.navigate(['/app/login']))
+      .catch((e) => console.error(e))
+  }
+
+  login() {
+    this.userService.login(this.user)
+      .then(() => {
+        this.alertyfy.success("You logged in successfully");
+        this.router.navigate(['/'])
+      })
+      .catch((e) => {
+        this.alertyfy.error("check your credentials");
+        console.error(e)
+      })
+  }
+
+}

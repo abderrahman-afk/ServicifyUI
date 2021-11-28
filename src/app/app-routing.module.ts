@@ -19,6 +19,7 @@ import { WorkerGuard } from "./auth/worker.guard";
 import { LoginAdminComponent } from "./pages/login-admin/login-admin.component";
 import { WorkerDashboardComponent } from "./pages/worker-dashboard/worker-dashboard.component";
 import { ChatComponent } from "./components/chat/chat.component";
+import { AuthComponent } from "./components/auth/auth.component";
 
 const routes: Routes = [
   {
@@ -28,7 +29,7 @@ const routes: Routes = [
       { path: "", component: MainComponent, canActivate: [AuthedGuard] },
       { path: "signup", component: SignupComponent, canActivate: [GuestGuard] },
       { path: "home", component: HomeComponent, canActivate: [GuestGuard] },
-      { path: "login", component: LoginComponent, canActivate: [GuestGuard] },
+      { path: "login", component: AuthComponent, canActivate: [GuestGuard] },
       { path: "ticket-list", component: TicketListComponent, canActivate: [AuthedGuard] },
       { path: "profile", component: ProfileComponent, canActivate: [AuthedGuard] },
       { path: "worker/home", component: WorkerDashboardComponent, canActivate: [AuthedGuard] },
