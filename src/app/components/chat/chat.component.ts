@@ -32,7 +32,7 @@ export class ChatComponent implements OnInit {
   }
 
   submit(): void {
-    this.http.post('http://159.223.28.104/service/api/messages', {
+    this.http.post('http://159.223.28.104/service/api/chat/messages', {
       username: this.username,
       message: this.message
     }).subscribe(() => this.message = '');
