@@ -29,14 +29,15 @@ const routes: Routes = [
       { path: "", component: MainComponent, canActivate: [AuthedGuard] },
       { path: "signup", component: SignupComponent, canActivate: [GuestGuard] },
       { path: "home", component: HomeComponent, canActivate: [GuestGuard] },
-      { path: "login", component: AuthComponent, canActivate: [GuestGuard] },
       { path: "ticket-list", component: TicketListComponent, canActivate: [AuthedGuard] },
       { path: "profile", component: ProfileComponent, canActivate: [AuthedGuard] },
       { path: "worker/home", component: WorkerDashboardComponent, canActivate: [AuthedGuard] },
       { path: "worker/profile/:id", component: WorkerProfileComponent, canActivate: [AuthedGuard, /*WorkerGuard*/] },
       {path:"chat",component:ChatComponent, canActivate: [AuthedGuard]}
     ],
-  }, { path: '', redirectTo: '/app/home', pathMatch: 'full' },
+  }, 
+  { path: '', redirectTo: '/app/home', pathMatch: 'full' },
+  { path: "login", component: AuthComponent, canActivate: [GuestGuard] },
   {
     path: "administration",
     component: AdminLayoutComponent,

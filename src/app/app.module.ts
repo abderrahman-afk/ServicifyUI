@@ -33,7 +33,7 @@ import { WorkerDashboardComponent } from './pages/worker-dashboard/worker-dashbo
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ChatComponent } from './components/chat/chat.component';
 import { AuthComponent } from './components/auth/auth.component';
-
+import { MatInputModule , MatFormFieldModule, MatIconModule  } from '@angular/material/'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,6 +64,9 @@ import { AuthComponent } from './components/auth/auth.component';
     AuthComponent
   ],
   imports: [
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
     NgbModule,
     HttpClientModule,
     FormsModule,

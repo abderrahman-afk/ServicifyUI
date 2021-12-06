@@ -14,6 +14,8 @@ export class AuthComponent implements OnInit {
   loginform: FormGroup;
   user: any = {};
   signupform : FormGroup;
+  swipe: Boolean = false ;
+  swipeClass: String = "container" ;
 
   constructor(private fb: FormBuilder, private userService: UserService, private router: Router, private alertyfy: AlertyfyService) { }
 
@@ -36,7 +38,7 @@ export class AuthComponent implements OnInit {
 
   signup() {
     this.userService.register(this.signupform.value)
-      .then(() => this.router.navigate(['/app/login']))
+      .then(() => this.swipeSide() )
       .catch((e) => console.error(e))
   }
 
@@ -50,6 +52,11 @@ export class AuthComponent implements OnInit {
         this.alertyfy.error("check your credentials");
         console.error(e)
       })
+  }
+
+  swipeSide() {
+    this.swipeClass = this.swipe ? "container" : "container right-panel-active"
+    this.swipe = !this.swipe
   }
 
 }

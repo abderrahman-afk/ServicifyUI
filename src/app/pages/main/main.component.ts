@@ -15,7 +15,7 @@ export class MainComponent implements OnInit {
   requestform: FormGroup;
   user: User;
   request: any = {};
-  category: Array<string> = ["POPULAR", "TECHNOLOGY", "DESIGN"];
+  categories = [];
   posts = [];
   recommended = [];
   search = []
@@ -46,7 +46,11 @@ export class MainComponent implements OnInit {
       this.search = response
     })
     .catch(this.errorLoading);
-    this.postService.posts_list().then().catch();
+    this.suggetionService.listCategories()
+    .then((response:any) => {
+      this.categories = response
+    })
+    .catch(this.errorLoading)
     this.requestform = this.fb.group({
       job: [""],
       description: [""],

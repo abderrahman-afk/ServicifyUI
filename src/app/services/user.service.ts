@@ -93,6 +93,15 @@ export class UserService {
     })
   }
 
+  updateImage( form ) {
+    return this.http.put(`/service/api/auth/updateImage/client`, form )
+    .toPromise()
+    .then( (response) => {
+      console.log(response) 
+      return response
+    })
+  }
+
   getRole() {
     return localStorage.getItem('role')
   }
