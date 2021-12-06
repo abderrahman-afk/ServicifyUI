@@ -12,6 +12,42 @@
     justify-content: space-around;
 }
 
+button {
+	border-radius: 20px;
+	background-color: #012970;
+	border: 1px solid #012970;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+
+select , textarea , input {
+	background-color: #eee;
+	border: none;
+  box-shadow: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+button:focus {
+	outline: none;
+}
+
+button.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
 .container {
     box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
     border-radius: 32px;
