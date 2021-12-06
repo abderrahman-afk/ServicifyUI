@@ -37,7 +37,7 @@ export class SuggestionService {
   }
 
   listCategories() {
-    return this.http.get(`/service/api/auth/listCategorie`)
+    return this.http.get(`/service/api/auth/listeCategorie/`)
     .toPromise()
     .then( (response) => {
       console.log(response) 
