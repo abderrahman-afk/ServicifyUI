@@ -44,4 +44,14 @@ export class SuggestionService {
       return response
     })
   }
+
+  recommendedPosts() {
+    return this.http.get(`/service/post/recommended/liste`)
+    .toPromise()
+    .then( (response) => {
+      console.log(response) 
+      return response
+    })
+  }
+  
 }

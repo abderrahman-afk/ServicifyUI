@@ -29,9 +29,10 @@ export class UserService {
   login(credentials) {
     return this.http.post(`/service/api/auth/login`, credentials,  this.config.guestRequest)
     .toPromise()
-    .then( (response) => {
+    .then( (response:any) => {
       console.log(response)
       this.setUserAndToken(response)
+      this.setProfile(response.user)
       this.alertyfy.success("login successful")
       return response
     })
@@ -42,6 +43,10 @@ export class UserService {
     localStorage.setItem('user', this.user.toJSON())
     localStorage.setItem('token',response.token)
     localStorage.setItem('role', response.user.groups ? Role.Admin : (response.user.is_employees ? Role.Worker : "client") )
+  }
+
+  setProfile(profile) {
+    localStorage.setItem('profile', JSON.stringify(profile) )
   }
 
   requestRole( form ) {
@@ -57,6 +62,16 @@ export class UserService {
     return localStorage.getItem('token')
   }
 
+  getProfile() {
+    return this.http
+    .get(`/service/api/auth/user`)
+    .toPromise()
+    .then( (response:any) => {
+      console.log(response)
+      return response
+    })
+  }
+
   getUser() {
     const user = localStorage.getItem('user')
     if ( user ) {
@@ -70,6 +85,7 @@ export class UserService {
       localStorage.removeItem('user')
       localStorage.removeItem('token')
       localStorage.removeItem('role')
+      localStorage.removeItem('profile')
     }
     return this.http.post(`/service/api/auth/logout`,{})
     .toPromise()
