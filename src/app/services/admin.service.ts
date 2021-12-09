@@ -40,6 +40,24 @@ export class AdminService {
     })
   }
 
+  ban(id) {
+    return this.http.put(`/service/api/auth/report/accepte/${id}/`,{})
+    .toPromise()
+    .then( (response) => {
+      console.log(response)
+      return response
+    })
+  }
+
+  ignoreReport(id) {
+    return this.http.put(`/service/api/auth/report/delete/${id}/`,{})
+    .toPromise()
+    .then( (response) => {
+      console.log(response)
+      return response
+    })
+  }
+
   rejectRequest(id) {
     return this.http.put(`/service/api/auth/refuse_role/${id}/`,{})
     .toPromise()
@@ -51,6 +69,15 @@ export class AdminService {
 
   requests() {
     return this.http.get(`/service/api/auth/listRequest/`)
+    .toPromise()
+    .then( (response:any) => {
+      console.log(response)
+      return response
+    })
+  }
+
+  reports() {
+    return this.http.get(`/service/api/auth/report/liste/`)
     .toPromise()
     .then( (response:any) => {
       console.log(response)

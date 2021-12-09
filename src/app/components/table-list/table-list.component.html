@@ -21,7 +21,7 @@
                     {{ value }}
                   </td>
                   <td *ngIf="object.actions">
-                    <button *ngFor="let button of object.actions" (click)='button.action()' [class]="'btn ' + button.icon "></button>
+                    <button *ngFor="let button of object.actions" data-toggle="tooltip"  [title]="button.tooltip || '' " (click)='button.action()' [class]="'btn ' + button.icon "></button>
                   </td>
                 </tr>
               </tbody>

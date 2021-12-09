@@ -8,7 +8,8 @@
           <div class="col-md-6 ml-auto mr-auto">
             <div class="profile">
               <div class="avatar">
-                <img [src]="'http://159.223.28.104' +  user.client.image" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+                <img [src]="'http://159.223.28.104' +  user.client.image" alt="Circle Image"
+                  class="img-raised rounded-circle img-fluid">
               </div>
               <div class="name">
                 <h3 class="title" style="color: black;">{{ user.client.nom | titlecase}}</h3>
@@ -19,6 +20,10 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="description text-center">
+          <button type="button" class="btn btn-success"  (click)="sendTicket()" > send ticket </button>
+          <button type="button" class="btn btn-danger"  (click)="report()"> report </button>
         </div>
         <div class="description text-center">
           <p> {{ user.description }}</p>

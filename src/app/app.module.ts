@@ -33,7 +33,8 @@ import { WorkerDashboardComponent } from './pages/worker-dashboard/worker-dashbo
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ChatComponent } from './components/chat/chat.component';
 import { AuthComponent } from './components/auth/auth.component';
-import { MatInputModule , MatFormFieldModule, MatIconModule  } from '@angular/material/'; 
+import { MatInputModule , MatFormFieldModule, MatIconModule , MatButtonModule } from '@angular/material/';
+import { ReportsComponent } from './pages/reports/reports.component'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,9 +62,11 @@ import { MatInputModule , MatFormFieldModule, MatIconModule  } from '@angular/ma
     LoginAdminComponent,
     WorkerDashboardComponent,
     ChatComponent,
-    AuthComponent
+    AuthComponent,
+    ReportsComponent
   ],
   imports: [
+    MatButtonModule,
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,

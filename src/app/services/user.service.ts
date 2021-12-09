@@ -93,6 +93,15 @@ export class UserService {
     })
   }
 
+  report(id) {
+    return this.http.post(`/service/api/auth/report/add/${id}/`,{})
+    .toPromise()
+    .then( (response) => {
+      console.log(response) 
+      return response
+    })
+  }
+
   updateImage( form ) {
     return this.http.put(`/service/api/auth/updateImage/client`, form )
     .toPromise()

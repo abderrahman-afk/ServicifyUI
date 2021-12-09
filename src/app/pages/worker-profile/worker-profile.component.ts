@@ -11,15 +11,23 @@ import { WorkerService } from 'src/app/services/worker.service';
 })
 export class WorkerProfileComponent implements OnInit {
 
-
-  constructor(private userService: UserService, private router: Router, private workerService:WorkerService, private route: ActivatedRoute, private ticketService: TicketService ) { }
-  
+  workerId
   user: User
   tickets= [];
+
+  constructor(
+    private userService: UserService, 
+    private router: Router, 
+    private workerService:WorkerService, 
+    private route: ActivatedRoute, 
+    private ticketService: TicketService ) { }
+  
+
 
   ngOnInit() {
     this.route.params.subscribe((params) => {
       const prodId = params['id'];
+      this.workerId = prodId
       this.workerService.worker(prodId)
       .then((response) => {
         this.user =  response
@@ -32,6 +40,14 @@ export class WorkerProfileComponent implements OnInit {
       .catch(e => console.log(e))
 
    })
+  }
+
+  sendTicket() {
+    this.ticketService.sendTicket(this.workerId ,{}).then(() => {}).catch(e => console.log(e))
+  }
+
+  report() {
+    this.userService.report(this.workerId).then(() => {}).catch(e => console.log(e))
   }
 
 }

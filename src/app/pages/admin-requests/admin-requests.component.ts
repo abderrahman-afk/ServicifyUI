@@ -46,8 +46,8 @@ export class AdminRequestsComponent implements OnInit {
           desponibility: request.desponibility,   
           description: request.description,
           actions: [
-            { name: 'accept' , icon: "bi bi-check-square-fill mx-1 btn-primary" , action: () => this.approve(request.id) } ,
-            { name: 'reject' , icon: "bi bi-backspace-reverse-fill mx-1 btn-danger" , action: () => this.reject(request.id) }
+            { name: 'accept' , icon: "bi bi-check-square-fill mx-1 btn-primary" ,  tooltip: "approve this request", action: () => this.approve(request.id) } ,
+            { name: 'reject' , icon: "bi bi-backspace-reverse-fill mx-1 btn-danger", tooltip: "reject this request" , action: () => this.reject(request.id) }
           ]
         } 
       })

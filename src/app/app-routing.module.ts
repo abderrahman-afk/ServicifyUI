@@ -20,6 +20,7 @@ import { LoginAdminComponent } from "./pages/login-admin/login-admin.component";
 import { WorkerDashboardComponent } from "./pages/worker-dashboard/worker-dashboard.component";
 import { ChatComponent } from "./components/chat/chat.component";
 import { AuthComponent } from "./components/auth/auth.component";
+import { ReportsComponent } from "./pages/reports/reports.component";
 
 const routes: Routes = [
   {
@@ -47,6 +48,8 @@ const routes: Routes = [
       { path: "clients", component: AdminClientsComponent, canActivate: [AdminGuard] },
       { path: "workers", component: AdminWorkersComponent, canActivate: [AdminGuard] },
       { path: "requests", component: AdminRequestsComponent, canActivate: [AdminGuard] },
+      { path: "reports", component: ReportsComponent , canActivate: [AdminGuard] },
+
     ],
   },
   {
