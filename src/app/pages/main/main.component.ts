@@ -52,7 +52,7 @@ export class MainComponent implements OnInit {
     })
     .catch(this.errorLoading)
     this.requestform = this.fb.group({
-      job: ["",Validators.required],
+      job: [""],
       description: [""],
       disponible: [""],
     });
