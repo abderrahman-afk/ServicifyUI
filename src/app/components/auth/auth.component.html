@@ -19,7 +19,7 @@
                     
                 </div>
             </div>
-            <input type="email" placeholder="Email" formControlName="email"/>
+            <input type="email" placeholder="user" formControlName="email"/>
             <div>
                 <div *ngIf="signupform.controls['email'].invalid && 
                 (signupform.controls['email'].touched || signupform.controls['email'].dirty) ">
@@ -58,7 +58,7 @@
                 <a href="#" class="social"><i class="fa fa-instagram"></i></a>
             </div>
             <h2>or use your account</h2>
-            <input type="email" [(ngModel)]="user.username" [ngModelOptions]="{standalone: true}" placeholder="Email" />
+            <input type="email" [(ngModel)]="user.username" [ngModelOptions]="{standalone: true}" placeholder="username" />
             <input type="password" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" placeholder="Password" />
             <a href="#">Forgot your password?</a>
             <button class="btn">Sign In</button>

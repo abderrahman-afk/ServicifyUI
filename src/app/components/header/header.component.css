@@ -1,12 +1,13 @@
 .serviceify {
-    font-size: 18px;
+    font-size: 40px;
     font-weight: 700;
     color: #012970 !important ;
     margin-left: 2px
 }
+ 
 
 i {
-    font-size: 18px;
+    font-size: 40px;
 }
 
 a , a:hover {
@@ -20,7 +21,7 @@ a , a:hover {
 }
 
 .serviceify:hover {
-    font-size: 18px;
+    font-size: 40px;
     text-decoration: none;
     color: #4154f1 !important ;
 }

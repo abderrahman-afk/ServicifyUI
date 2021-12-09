@@ -78,15 +78,23 @@
             <form class="request" #requestform="ngForm" (ngSubmit)="requestRole()">
                 <input type="text" placeholder="Job" [(ngModel)]="request.job" [ngModelOptions]="{standalone: true}"
                     autofocus />
-                <i class="fa fa-user"></i>
-                <input type="text" placeholder="Disponible" [(ngModel)]="request.disponible"
-                    [ngModelOptions]="{standalone: true}" />
+                <!-- <i class="fa fa-user"></i> -->
+                <!-- <input type="text" placeholder="Disponible" [(ngModel)]="request.disponible"
+                    [ngModelOptions]="{standalone: true}" /> -->
                 <i class="fa fa-key"></i>
                 <input type="text" placeholder="Description" [(ngModel)]="request.description"
                     [ngModelOptions]="{standalone: true}" />
                 <i class="fa fa-key"></i>
+                <label for="Disponible">Disponible</label>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" [(ngModel)]="request.description"
+                [ngModelOptions]="{standalone: true}">
+                    <!-- <option selected value=>Disponible</option> -->
+                    <option value="full-time" selected>full-time</option>
+                    <option value="part-time">part-time</option>
+                  
+                </select>
                 <div>
-                    <button class="btn"> Request </button>
+                    <button class="btn" (click)="requestsend()" > Request </button>
                 </div>
             </form>
         </div>
