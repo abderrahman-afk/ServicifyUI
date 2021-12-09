@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { FormBuilder, FormGroup } from "@angular/forms";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { User } from "src/app/class/user";
 import { AlertyfyService } from "src/app/services/alertyfy.service";
 import { PostService } from "src/app/services/post.service";
@@ -52,7 +52,7 @@ export class MainComponent implements OnInit {
     })
     .catch(this.errorLoading)
     this.requestform = this.fb.group({
-      job: [""],
+      job: ["",Validators.required],
       description: [""],
       disponible: [""],
     });
@@ -76,6 +76,9 @@ export class MainComponent implements OnInit {
       this.search = response
     })
     .catch(this.errorLoading);
+  }
+  requestsend(){
+    this.alertyfy.success("your request has been send")
   }
   
 }
