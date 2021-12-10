@@ -39,7 +39,16 @@ export class WorkerDashboardComponent implements OnInit {
     this.ticketService.listTickets().then((response:any) => {
       this.tickets = response
     }).catch( e => console.log(e) )
-  }
 
+    this.suggetionService.recommendedPosts()
+        .then((response:any) => {
+      this.posts = response
+    })
+    .catch(this.errorLoading);
+  }
+errorLoading(e) {
+    console.log(e)
+    this.alertyfy.error("error loading data")
+  }
 
 }
